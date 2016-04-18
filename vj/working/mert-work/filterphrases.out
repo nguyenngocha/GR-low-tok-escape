@@ -1,0 +1,2 @@
+To run the decoder, please call:
+  moses -f /home/ngocha/vj/working/mert-work/filtered/moses.ini -i /home/ngocha/vj/working/mert-work/filtered/input.4734

@@ -1,0 +1,12 @@
+Binary write mode is NOT selected
+Scorer type: BLEU
+name: case value: true
+Loading reference from /home/ngocha/jv/corpus/turn.true.vi
+........Data::m_score_type BLEU
+Data::Scorer type from Scorer: BLEU
+loading nbest from run10.best100.out.gz
+Loaded N-best lists : [Wall 1.0579 CPU 1.056] seconds.
+Binary write mode is NOT selected
+saving the array into run10.features.dat
+saving the array into run10.scores.dat
+Stopping... : [Wall 2.12576 CPU 2.124] seconds.

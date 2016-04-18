@@ -1,0 +1,2181 @@
+nohup: ignoring input
+Using SCRIPTS_ROOTDIR: /home/ngocha/vjjt/mosesdecoder/scripts
+Using single-thread GIZA
+using gzip 
+(1) preparing corpus @ Sun Apr 17 20:30:16 ICT 2016
+Executing: mkdir -p /home/ngocha/vjjt/working/train/corpus
+(1.0) selecting factors @ Sun Apr 17 20:30:16 ICT 2016
+(1.1) running mkcls  @ Sun Apr 17 20:30:16 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/tools/mkcls -c50 -n2 -p/home/ngocha/vjjt/corpus/train.clean.vi -V/home/ngocha/vjjt/working/train/corpus/vi.vcb.classes opt
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/mkcls -c50 -n2 -p/home/ngocha/vjjt/corpus/train.clean.vi -V/home/ngocha/vjjt/working/train/corpus/vi.vcb.classes opt
+
+***** 2 runs. (algorithm:TA)*****
+;KategProblem:cats: 50   words: 25764
+
+start-costs: MEAN: 1.58912e+07 (1.58889e+07-1.58935e+07)  SIGMA:2300.55   
+  end-costs: MEAN: 1.51102e+07 (1.51069e+07-1.51135e+07)  SIGMA:3314.68   
+   start-pp: MEAN: 713.185 (711.758-714.612)  SIGMA:1.42686   
+     end-pp: MEAN: 361.607 (360.564-362.649)  SIGMA:1.04238   
+ iterations: MEAN: 616994 (610079-623909)  SIGMA:6915   
+       time: MEAN: 24.46 (23.9-25.02)  SIGMA:0.56   
+(1.1) running mkcls  @ Sun Apr 17 20:31:07 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/tools/mkcls -c50 -n2 -p/home/ngocha/vjjt/corpus/train.clean.ja -V/home/ngocha/vjjt/working/train/corpus/ja.vcb.classes opt
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/mkcls -c50 -n2 -p/home/ngocha/vjjt/corpus/train.clean.ja -V/home/ngocha/vjjt/working/train/corpus/ja.vcb.classes opt
+
+***** 2 runs. (algorithm:TA)*****
+;KategProblem:cats: 50   words: 2756
+
+start-costs: MEAN: 2.5295e+07 (2.52674e+07-2.53225e+07)  SIGMA:27544.6   
+  end-costs: MEAN: 2.39031e+07 (2.39016e+07-2.39047e+07)  SIGMA:1581.32   
+   start-pp: MEAN: 161.842 (159.365-164.319)  SIGMA:2.4768   
+     end-pp: MEAN: 74.6749 (74.6093-74.7406)  SIGMA:0.0656131   
+ iterations: MEAN: 71935.5 (71445-72426)  SIGMA:490.5   
+       time: MEAN: 6.04 (6-6.08)  SIGMA:0.04   
+(1.2) creating vcb file /home/ngocha/vjjt/working/train/corpus/vi.vcb @ Sun Apr 17 20:31:20 ICT 2016
+(1.2) creating vcb file /home/ngocha/vjjt/working/train/corpus/ja.vcb @ Sun Apr 17 20:31:21 ICT 2016
+(1.3) numberizing corpus /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt @ Sun Apr 17 20:31:21 ICT 2016
+(1.3) numberizing corpus /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt @ Sun Apr 17 20:31:23 ICT 2016
+(2) running giza @ Sun Apr 17 20:31:24 ICT 2016
+(2.1a) running snt2cooc vi-ja @ Sun Apr 17 20:31:24 ICT 2016
+
+Executing: mkdir -p /home/ngocha/vjjt/working/train/giza.vi-ja
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/snt2cooc.out /home/ngocha/vjjt/working/train/corpus/ja.vcb /home/ngocha/vjjt/working/train/corpus/vi.vcb /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt > /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc
+/home/ngocha/vjjt/mosesdecoder/tools/snt2cooc.out /home/ngocha/vjjt/working/train/corpus/ja.vcb /home/ngocha/vjjt/working/train/corpus/vi.vcb /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt > /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc
+line 1000
+line 2000
+line 3000
+line 4000
+line 5000
+line 6000
+line 7000
+line 8000
+line 9000
+line 10000
+line 11000
+line 12000
+line 13000
+line 14000
+line 15000
+line 16000
+line 17000
+line 18000
+line 19000
+line 20000
+line 21000
+line 22000
+line 23000
+line 24000
+line 25000
+line 26000
+line 27000
+line 28000
+line 29000
+line 30000
+line 31000
+line 32000
+line 33000
+line 34000
+line 35000
+line 36000
+line 37000
+line 38000
+line 39000
+line 40000
+line 41000
+line 42000
+line 43000
+line 44000
+line 45000
+line 46000
+line 47000
+line 48000
+line 49000
+line 50000
+line 51000
+line 52000
+line 53000
+line 54000
+line 55000
+END.
+(2.1b) running giza vi-ja @ Sun Apr 17 20:31:39 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc -c /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/ja.vcb -t /home/ngocha/vjjt/working/train/corpus/vi.vcb
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc -c /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/ja.vcb -t /home/ngocha/vjjt/working/train/corpus/vi.vcb
+/home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc -c /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/ja.vcb -t /home/ngocha/vjjt/working/train/corpus/vi.vcb
+Parameter 'coocurrencefile' changed from '' to '/home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.cooc'
+Parameter 'c' changed from '' to '/home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt'
+Parameter 'm3' changed from '5' to '3'
+Parameter 'm4' changed from '5' to '3'
+Parameter 'model1dumpfrequency' changed from '0' to '1'
+Parameter 'model4smoothfactor' changed from '0.2' to '0.4'
+Parameter 'nodumps' changed from '0' to '1'
+Parameter 'nsmooth' changed from '64' to '4'
+Parameter 'o' changed from '116-04-17.203139.ngocha' to '/home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja'
+Parameter 'onlyaldumps' changed from '0' to '1'
+Parameter 'p0' changed from '-1' to '0.999'
+Parameter 's' changed from '' to '/home/ngocha/vjjt/working/train/corpus/ja.vcb'
+Parameter 't' changed from '' to '/home/ngocha/vjjt/working/train/corpus/vi.vcb'
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 3  (number of iterations for Model 3)
+model4iterations = 3  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = 116-04-17.203139.ngocha.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 1  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 1  (1: do not write any files)
+o = /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja  (output file prefix)
+onlyaldumps = 1  (1: do not write any files)
+outputpath =   (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt  (training corpus file name)
+d =   (dictionary file name)
+s = /home/ngocha/vjjt/working/train/corpus/ja.vcb  (source vocabulary file name)
+t = /home/ngocha/vjjt/working/train/corpus/vi.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.4  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 4  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = 0.999  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 3  (number of iterations for Model 3)
+model4iterations = 3  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = 116-04-17.203139.ngocha.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 1  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 1  (1: do not write any files)
+o = /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja  (output file prefix)
+onlyaldumps = 1  (1: do not write any files)
+outputpath =   (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt  (training corpus file name)
+d =   (dictionary file name)
+s = /home/ngocha/vjjt/working/train/corpus/ja.vcb  (source vocabulary file name)
+t = /home/ngocha/vjjt/working/train/corpus/vi.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.4  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 4  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = 0.999  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+
+reading vocabulary files 
+Reading vocabulary file from:/home/ngocha/vjjt/working/train/corpus/ja.vcb
+Reading vocabulary file from:/home/ngocha/vjjt/working/train/corpus/vi.vcb
+Source vocabulary list has 2757 unique tokens 
+Target vocabulary list has 25765 unique tokens 
+Calculating vocabulary frequencies from corpus /home/ngocha/vjjt/working/train/corpus/vi-ja-int-train.snt
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+ Train total # sentence pairs (weighted): 55223
+Size of source portion of the training corpus: 1.74449e+06 tokens
+Size of the target portion of the training corpus: 1.09466e+06 tokens 
+In source portion of the training corpus, only 2756 unique tokens appeared
+In target portion of the training corpus, only 25763 unique tokens appeared
+lambda for PP calculation in IBM-1,IBM-2,HMM:= 1.09466e+06/(1.79971e+06-55223)== 0.627494
+There are 3334597 3334597 entries in table
+==========================================================
+Model1 Training Started at: Sun Apr 17 20:31:40 2016
+
+-----------
+Model1: Iteration 1
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (1) TRAIN CROSS-ENTROPY 15.1402 PERPLEXITY 36112.4
+Model1: (1) VITERBI TRAIN CROSS-ENTROPY inf PERPLEXITY inf
+Model 1 Iteration: 1 took: 10 seconds
+-----------
+Model1: Iteration 2
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (2) TRAIN CROSS-ENTROPY 9.6369 PERPLEXITY 796.153
+Model1: (2) VITERBI TRAIN CROSS-ENTROPY 13.0299 PERPLEXITY 8363.8
+Model 1 Iteration: 2 took: 11 seconds
+-----------
+Model1: Iteration 3
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (3) TRAIN CROSS-ENTROPY 9.08767 PERPLEXITY 544.076
+Model1: (3) VITERBI TRAIN CROSS-ENTROPY 11.8677 PERPLEXITY 3737.19
+Model 1 Iteration: 3 took: 10 seconds
+-----------
+Model1: Iteration 4
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (4) TRAIN CROSS-ENTROPY 8.86716 PERPLEXITY 466.962
+Model1: (4) VITERBI TRAIN CROSS-ENTROPY 11.2871 PERPLEXITY 2498.97
+Model 1 Iteration: 4 took: 11 seconds
+-----------
+Model1: Iteration 5
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (5) TRAIN CROSS-ENTROPY 8.77857 PERPLEXITY 439.149
+Model1: (5) VITERBI TRAIN CROSS-ENTROPY 10.9667 PERPLEXITY 2001.34
+Model 1 Iteration: 5 took: 12 seconds
+Entire Model1 Training took: 54 seconds
+NOTE: I am doing iterations with the HMM model!
+Read classes: #words: 2756  #classes: 51
+Read classes: #words: 25764  #classes: 51
+
+==========================================================
+Hmm Training Started at: Sun Apr 17 20:32:34 2016
+
+-----------
+Hmm: Iteration 1
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 196822 parameters.
+Hmm: (1) TRAIN CROSS-ENTROPY 8.68129 PERPLEXITY 410.514
+Hmm: (1) VITERBI TRAIN CROSS-ENTROPY 10.7608 PERPLEXITY 1735.09
+
+Hmm Iteration: 1 took: 100 seconds
+
+-----------
+Hmm: Iteration 2
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 196822 parameters.
+Hmm: (2) TRAIN CROSS-ENTROPY 8.45353 PERPLEXITY 350.564
+Hmm: (2) VITERBI TRAIN CROSS-ENTROPY 9.50152 PERPLEXITY 724.843
+
+Hmm Iteration: 2 took: 100 seconds
+
+-----------
+Hmm: Iteration 3
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 196822 parameters.
+Hmm: (3) TRAIN CROSS-ENTROPY 8.26032 PERPLEXITY 306.623
+Hmm: (3) VITERBI TRAIN CROSS-ENTROPY 9.119 PERPLEXITY 556.021
+
+Hmm Iteration: 3 took: 95 seconds
+
+-----------
+Hmm: Iteration 4
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 196822 parameters.
+Hmm: (4) TRAIN CROSS-ENTROPY 8.14843 PERPLEXITY 283.74
+Hmm: (4) VITERBI TRAIN CROSS-ENTROPY 8.90415 PERPLEXITY 479.088
+
+Hmm Iteration: 4 took: 95 seconds
+
+-----------
+Hmm: Iteration 5
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 196822 parameters.
+Hmm: (5) TRAIN CROSS-ENTROPY 8.07433 PERPLEXITY 269.536
+Hmm: (5) VITERBI TRAIN CROSS-ENTROPY 8.7598 PERPLEXITY 433.473
+
+Hmm Iteration: 5 took: 95 seconds
+
+Entire Hmm Training took: 485 seconds
+==========================================================
+Read classes: #words: 2756  #classes: 51
+Read classes: #words: 25764  #classes: 51
+Read classes: #words: 2756  #classes: 51
+Read classes: #words: 25764  #classes: 51
+
+==========================================================
+Starting H333444:  Viterbi Training
+ H333444 Training Started at: Sun Apr 17 20:40:39 2016
+
+
+---------------------
+THTo3: Iteration 1
+Reading more sentence pairs into memory ... 
+10000
+20000
+30000
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1032.64 #alsophisticatedcountcollection: 0 #hcsteps: 0
+#peggingImprovements: 0
+A/D table contains 196822 parameters.
+A/D table contains 247981 parameters.
+NTable contains 27570 parameter.
+p0_count is 573356 and p1 is 259361; p0 is 0.999 p1: 0.001
+THTo3: TRAIN CROSS-ENTROPY 8.19083 PERPLEXITY 292.204
+THTo3: (1) TRAIN VITERBI CROSS-ENTROPY 8.39223 PERPLEXITY 335.98
+
+THTo3 Viterbi Iteration : 1 took: 67 seconds
+
+---------------------
+Model3: Iteration 2
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 2.93895 2 54 64
+WARNING: already 42 iterations in hillclimb: 2.64942 2 39 60
+WARNING: already 43 iterations in hillclimb: 1.73942 2 4 24
+WARNING: already 44 iterations in hillclimb: 1.07181 2 24 1
+WARNING: already 45 iterations in hillclimb: 1.05899 2 31 0
+WARNING: already 46 iterations in hillclimb: 2.84631 2 65 66
+WARNING: already 47 iterations in hillclimb: 1.00001 0 65 66
+WARNING: already 41 iterations in hillclimb: 5.78191 2 55 62
+WARNING: already 42 iterations in hillclimb: 3.54646 2 19 36
+WARNING: already 43 iterations in hillclimb: 2.99432 2 53 44
+WARNING: already 44 iterations in hillclimb: 2.51735 2 23 13
+WARNING: already 45 iterations in hillclimb: 1.34468 2 35 5
+WARNING: already 46 iterations in hillclimb: 1.11066 2 37 37
+WARNING: already 47 iterations in hillclimb: 1.00001 0 37 37
+10000
+WARNING: already 41 iterations in hillclimb: 3.78878 2 40 57
+WARNING: already 42 iterations in hillclimb: 1.00001 0 40 57
+WARNING: already 41 iterations in hillclimb: 1.00001 0 56 39
+20000
+30000
+WARNING: already 41 iterations in hillclimb: 1.72425 2 30 27
+WARNING: already 42 iterations in hillclimb: 1.51203 2 25 2
+WARNING: already 43 iterations in hillclimb: 1.26824 2 1 39
+WARNING: already 44 iterations in hillclimb: 1.2254 2 18 0
+WARNING: already 45 iterations in hillclimb: 1.29301 2 60 67
+WARNING: already 46 iterations in hillclimb: 1.04587 2 23 27
+WARNING: already 47 iterations in hillclimb: 1.00001 0 23 27
+WARNING: already 41 iterations in hillclimb: 1.00001 0 59 60
+40000
+WARNING: already 41 iterations in hillclimb: 7.34345 2 45 30
+WARNING: already 42 iterations in hillclimb: 7.15174 2 13 18
+WARNING: already 43 iterations in hillclimb: 5.75342 2 66 10
+WARNING: already 44 iterations in hillclimb: 3.63397 2 63 37
+WARNING: already 45 iterations in hillclimb: 2.93103 2 62 67
+WARNING: already 46 iterations in hillclimb: 2.10986 2 41 63
+WARNING: already 47 iterations in hillclimb: 2.7371 2 66 63
+WARNING: already 48 iterations in hillclimb: 1.71329 2 49 54
+WARNING: already 49 iterations in hillclimb: 1.30832 2 17 18
+WARNING: already 50 iterations in hillclimb: 1.25054 2 37 62
+WARNING: already 51 iterations in hillclimb: 1.16004 2 57 34
+WARNING: already 52 iterations in hillclimb: 1.00001 0 57 34
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1043.73 #alsophisticatedcountcollection: 0 #hcsteps: 6.96315
+#peggingImprovements: 0
+A/D table contains 196822 parameters.
+A/D table contains 247981 parameters.
+NTable contains 27570 parameter.
+p0_count is 988867 and p1 is 52894.4; p0 is 0.999 p1: 0.001
+Model3: TRAIN CROSS-ENTROPY 9.92888 PERPLEXITY 974.742
+Model3: (2) TRAIN VITERBI CROSS-ENTROPY 10.0978 PERPLEXITY 1095.81
+
+Model3 Viterbi Iteration : 2 took: 58 seconds
+
+---------------------
+Model3: Iteration 3
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 1.38693 2 35 55
+WARNING: already 42 iterations in hillclimb: 1.00001 0 35 55
+10000
+WARNING: already 41 iterations in hillclimb: 2.42172 2 47 66
+WARNING: already 42 iterations in hillclimb: 36.8215 2 53 66
+WARNING: already 43 iterations in hillclimb: 14.9888 2 41 66
+WARNING: already 44 iterations in hillclimb: 1.5703 2 15 20
+WARNING: already 45 iterations in hillclimb: 1.41771 2 26 0
+WARNING: already 46 iterations in hillclimb: 1.37014 2 59 66
+WARNING: already 47 iterations in hillclimb: 1.05819 2 14 0
+WARNING: already 48 iterations in hillclimb: 1.05448 2 27 66
+WARNING: already 49 iterations in hillclimb: 1.00001 0 27 66
+20000
+WARNING: already 41 iterations in hillclimb: 1.00001 0 39 55
+30000
+40000
+WARNING: already 41 iterations in hillclimb: 50.7879 2 35 30
+WARNING: already 42 iterations in hillclimb: 41.0774 2 50 68
+WARNING: already 43 iterations in hillclimb: 18.6551 2 17 18
+WARNING: already 44 iterations in hillclimb: 13.875 2 62 67
+WARNING: already 45 iterations in hillclimb: 8.87253 2 53 61
+WARNING: already 46 iterations in hillclimb: 6.76728 2 34 30
+WARNING: already 47 iterations in hillclimb: 5.0623 2 10 58
+WARNING: already 48 iterations in hillclimb: 3.47637 2 18 58
+WARNING: already 49 iterations in hillclimb: 3.07813 2 37 62
+WARNING: already 50 iterations in hillclimb: 2.07292 2 66 10
+WARNING: already 51 iterations in hillclimb: 1.37626 2 41 63
+WARNING: already 52 iterations in hillclimb: 8.05585 2 66 63
+WARNING: already 53 iterations in hillclimb: 1.00001 0 66 63
+50000
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 10.5334 2 23 33
+WARNING: already 42 iterations in hillclimb: 11.104 2 5 0
+WARNING: already 43 iterations in hillclimb: 8.07222 2 58 60
+WARNING: already 44 iterations in hillclimb: 5.8767 2 32 23
+WARNING: already 45 iterations in hillclimb: 4.46604 2 47 65
+WARNING: already 46 iterations in hillclimb: 2.88809 2 36 37
+WARNING: already 47 iterations in hillclimb: 2.00138 2 6 0
+WARNING: already 48 iterations in hillclimb: 2.1876 2 4 3
+WARNING: already 49 iterations in hillclimb: 1.44367 2 46 79
+WARNING: already 50 iterations in hillclimb: 1.13571 2 20 34
+WARNING: already 51 iterations in hillclimb: 1.00001 0 20 34
+WARNING: already 41 iterations in hillclimb: 1.00001 0 74 51
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1043.39 #alsophisticatedcountcollection: 0 #hcsteps: 6.48199
+#peggingImprovements: 0
+A/D table contains 196822 parameters.
+A/D table contains 247981 parameters.
+NTable contains 27570 parameter.
+p0_count is 1.02567e+06 and p1 is 34492.5; p0 is 0.999 p1: 0.001
+Model3: TRAIN CROSS-ENTROPY 9.65248 PERPLEXITY 804.799
+Model3: (3) TRAIN VITERBI CROSS-ENTROPY 9.79345 PERPLEXITY 887.406
+
+Model3 Viterbi Iteration : 3 took: 56 seconds
+
+---------------------
+T3To4: Iteration 4
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 1.59534 2 41 30
+WARNING: already 42 iterations in hillclimb: 7.61264 2 53 30
+WARNING: already 43 iterations in hillclimb: 1.00001 0 53 30
+WARNING: already 41 iterations in hillclimb: 2.92372 2 70 73
+WARNING: already 42 iterations in hillclimb: 1.68592 2 19 32
+WARNING: already 43 iterations in hillclimb: 1.00001 0 19 32
+WARNING: already 41 iterations in hillclimb: 35.9673 2 60 60
+WARNING: already 42 iterations in hillclimb: 2.92816 2 50 67
+WARNING: already 43 iterations in hillclimb: 1.08943 2 35 55
+WARNING: already 44 iterations in hillclimb: 1.00001 0 35 55
+10000
+WARNING: already 41 iterations in hillclimb: 24.7647 2 41 66
+WARNING: already 42 iterations in hillclimb: 1.60753 2 24 0
+WARNING: already 43 iterations in hillclimb: 1.00001 0 24 0
+20000
+30000
+WARNING: already 41 iterations in hillclimb: 2.85919 2 61 66
+WARNING: already 42 iterations in hillclimb: 2.3287 2 46 6
+WARNING: already 43 iterations in hillclimb: 1.51982 2 39 67
+WARNING: already 44 iterations in hillclimb: 1.04202 2 54 48
+WARNING: already 45 iterations in hillclimb: 1.00001 0 54 48
+40000
+WARNING: already 41 iterations in hillclimb: 34.9168 2 56 37
+WARNING: already 42 iterations in hillclimb: 22.3709 2 62 67
+WARNING: already 43 iterations in hillclimb: 9.62475 2 17 61
+WARNING: already 44 iterations in hillclimb: 8.13438 2 34 30
+WARNING: already 45 iterations in hillclimb: 7.69395 2 14 37
+WARNING: already 46 iterations in hillclimb: 5.96876 2 51 68
+WARNING: already 47 iterations in hillclimb: 3.50768 2 37 41
+WARNING: already 48 iterations in hillclimb: 1.93333 2 10 58
+WARNING: already 49 iterations in hillclimb: 1.00001 0 10 58
+50000
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 8.15429 2 4 3
+WARNING: already 42 iterations in hillclimb: 6.38852 2 36 37
+WARNING: already 43 iterations in hillclimb: 3.83414 2 20 34
+WARNING: already 44 iterations in hillclimb: 2.52151 2 47 65
+WARNING: already 45 iterations in hillclimb: 1.88719 2 6 0
+WARNING: already 46 iterations in hillclimb: 2.43536 2 45 46
+WARNING: already 47 iterations in hillclimb: 1.12585 2 63 46
+WARNING: already 48 iterations in hillclimb: 1.0808 2 31 57
+WARNING: already 49 iterations in hillclimb: 10.2574 2 43 57
+WARNING: already 50 iterations in hillclimb: 1.00001 0 43 57
+WARNING: already 41 iterations in hillclimb: 1.80865 2 28 15
+WARNING: already 42 iterations in hillclimb: 1.00001 0 28 15
+WARNING: already 41 iterations in hillclimb: 15.1298 2 51 45
+WARNING: already 42 iterations in hillclimb: 1.00001 0 51 45
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1043.33 #alsophisticatedcountcollection: 216.574 #hcsteps: 6.22503
+#peggingImprovements: 0
+D4 table contains 528612 parameters.
+A/D table contains 196822 parameters.
+A/D table contains 247981 parameters.
+NTable contains 27570 parameter.
+p0_count is 1.03026e+06 and p1 is 32197.1; p0 is 0.999 p1: 0.001
+T3To4: TRAIN CROSS-ENTROPY 9.60042 PERPLEXITY 776.271
+T3To4: (4) TRAIN VITERBI CROSS-ENTROPY 9.72897 PERPLEXITY 848.616
+
+T3To4 Viterbi Iteration : 4 took: 78 seconds
+
+---------------------
+Model4: Iteration 5
+Reading more sentence pairs into memory ... 
+10000
+20000
+30000
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1044.05 #alsophisticatedcountcollection: 172.697 #hcsteps: 4.98593
+#peggingImprovements: 0
+D4 table contains 528612 parameters.
+A/D table contains 196822 parameters.
+A/D table contains 248778 parameters.
+NTable contains 27570 parameter.
+p0_count is 1.01749e+06 and p1 is 38584.2; p0 is 0.999 p1: 0.001
+Model4: TRAIN CROSS-ENTROPY 9.63124 PERPLEXITY 793.032
+Model4: (5) TRAIN VITERBI CROSS-ENTROPY 9.73644 PERPLEXITY 853.023
+
+Model4 Viterbi Iteration : 5 took: 179 seconds
+
+---------------------
+Model4: Iteration 6
+Reading more sentence pairs into memory ... 
+10000
+20000
+30000
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1044.28 #alsophisticatedcountcollection: 146.798 #hcsteps: 4.71467
+#peggingImprovements: 0
+D4 table contains 528612 parameters.
+A/D table contains 196822 parameters.
+A/D table contains 248869 parameters.
+NTable contains 27570 parameter.
+p0_count is 1.01862e+06 and p1 is 38017.4; p0 is 0.999 p1: 0.001
+Model4: TRAIN CROSS-ENTROPY 9.45103 PERPLEXITY 699.912
+Model4: (6) TRAIN VITERBI CROSS-ENTROPY 9.54575 PERPLEXITY 747.405
+
+Model4 Viterbi Iteration : 6 took: 169 seconds
+H333444 Training Finished at: Sun Apr 17 20:50:46 2016
+
+
+Entire Viterbi H333444 Training took: 607 seconds
+==========================================================
+
+Entire Training took: 1147 seconds
+Program Finished at: Sun Apr 17 20:50:46 2016
+
+==========================================================
+Executing: rm -f /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.A3.final.gz
+Executing: gzip /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.A3.final
+(2.1a) running snt2cooc ja-vi @ Sun Apr 17 20:50:48 ICT 2016
+
+Executing: mkdir -p /home/ngocha/vjjt/working/train/giza.ja-vi
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/snt2cooc.out /home/ngocha/vjjt/working/train/corpus/vi.vcb /home/ngocha/vjjt/working/train/corpus/ja.vcb /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt > /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc
+/home/ngocha/vjjt/mosesdecoder/tools/snt2cooc.out /home/ngocha/vjjt/working/train/corpus/vi.vcb /home/ngocha/vjjt/working/train/corpus/ja.vcb /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt > /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc
+line 1000
+line 2000
+line 3000
+line 4000
+line 5000
+line 6000
+line 7000
+line 8000
+line 9000
+line 10000
+line 11000
+line 12000
+line 13000
+line 14000
+line 15000
+line 16000
+line 17000
+line 18000
+line 19000
+line 20000
+line 21000
+line 22000
+line 23000
+line 24000
+line 25000
+line 26000
+line 27000
+line 28000
+line 29000
+line 30000
+line 31000
+line 32000
+line 33000
+line 34000
+line 35000
+line 36000
+line 37000
+line 38000
+line 39000
+line 40000
+line 41000
+line 42000
+line 43000
+line 44000
+line 45000
+line 46000
+line 47000
+line 48000
+line 49000
+line 50000
+line 51000
+line 52000
+line 53000
+line 54000
+line 55000
+END.
+(2.1b) running giza ja-vi @ Sun Apr 17 20:50:57 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc -c /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/vi.vcb -t /home/ngocha/vjjt/working/train/corpus/ja.vcb
+Executing: /home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc -c /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/vi.vcb -t /home/ngocha/vjjt/working/train/corpus/ja.vcb
+/home/ngocha/vjjt/mosesdecoder/tools/GIZA++  -CoocurrenceFile /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc -c /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt -m1 5 -m2 0 -m3 3 -m4 3 -model1dumpfrequency 1 -model4smoothfactor 0.4 -nodumps 1 -nsmooth 4 -o /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi -onlyaldumps 1 -p0 0.999 -s /home/ngocha/vjjt/working/train/corpus/vi.vcb -t /home/ngocha/vjjt/working/train/corpus/ja.vcb
+Parameter 'coocurrencefile' changed from '' to '/home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.cooc'
+Parameter 'c' changed from '' to '/home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt'
+Parameter 'm3' changed from '5' to '3'
+Parameter 'm4' changed from '5' to '3'
+Parameter 'model1dumpfrequency' changed from '0' to '1'
+Parameter 'model4smoothfactor' changed from '0.2' to '0.4'
+Parameter 'nodumps' changed from '0' to '1'
+Parameter 'nsmooth' changed from '64' to '4'
+Parameter 'o' changed from '116-04-17.205057.ngocha' to '/home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi'
+Parameter 'onlyaldumps' changed from '0' to '1'
+Parameter 'p0' changed from '-1' to '0.999'
+Parameter 's' changed from '' to '/home/ngocha/vjjt/working/train/corpus/vi.vcb'
+Parameter 't' changed from '' to '/home/ngocha/vjjt/working/train/corpus/ja.vcb'
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 3  (number of iterations for Model 3)
+model4iterations = 3  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = 116-04-17.205057.ngocha.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 1  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 1  (1: do not write any files)
+o = /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi  (output file prefix)
+onlyaldumps = 1  (1: do not write any files)
+outputpath =   (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt  (training corpus file name)
+d =   (dictionary file name)
+s = /home/ngocha/vjjt/working/train/corpus/vi.vcb  (source vocabulary file name)
+t = /home/ngocha/vjjt/working/train/corpus/ja.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.4  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 4  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = 0.999  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 3  (number of iterations for Model 3)
+model4iterations = 3  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = 116-04-17.205057.ngocha.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 1  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 1  (1: do not write any files)
+o = /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi  (output file prefix)
+onlyaldumps = 1  (1: do not write any files)
+outputpath =   (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt  (training corpus file name)
+d =   (dictionary file name)
+s = /home/ngocha/vjjt/working/train/corpus/vi.vcb  (source vocabulary file name)
+t = /home/ngocha/vjjt/working/train/corpus/ja.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.4  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 4  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = 0.999  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+
+reading vocabulary files 
+Reading vocabulary file from:/home/ngocha/vjjt/working/train/corpus/vi.vcb
+Reading vocabulary file from:/home/ngocha/vjjt/working/train/corpus/ja.vcb
+Source vocabulary list has 25765 unique tokens 
+Target vocabulary list has 2757 unique tokens 
+Calculating vocabulary frequencies from corpus /home/ngocha/vjjt/working/train/corpus/ja-vi-int-train.snt
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+ Train total # sentence pairs (weighted): 55223
+Size of source portion of the training corpus: 1.09466e+06 tokens
+Size of the target portion of the training corpus: 1.74449e+06 tokens 
+In source portion of the training corpus, only 25764 unique tokens appeared
+In target portion of the training corpus, only 2755 unique tokens appeared
+lambda for PP calculation in IBM-1,IBM-2,HMM:= 1.74449e+06/(1.14988e+06-55223)== 1.59364
+There are 3311589 3311589 entries in table
+==========================================================
+Model1 Training Started at: Sun Apr 17 20:50:58 2016
+
+-----------
+Model1: Iteration 1
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (1) TRAIN CROSS-ENTROPY 11.6903 PERPLEXITY 3304.74
+Model1: (1) VITERBI TRAIN CROSS-ENTROPY 16.2381 PERPLEXITY 77295.6
+Model 1 Iteration: 1 took: 8 seconds
+-----------
+Model1: Iteration 2
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (2) TRAIN CROSS-ENTROPY 7.42385 PERPLEXITY 171.713
+Model1: (2) VITERBI TRAIN CROSS-ENTROPY 10.4959 PERPLEXITY 1444.09
+Model 1 Iteration: 2 took: 7 seconds
+-----------
+Model1: Iteration 3
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (3) TRAIN CROSS-ENTROPY 7.00948 PERPLEXITY 128.844
+Model1: (3) VITERBI TRAIN CROSS-ENTROPY 9.68329 PERPLEXITY 822.168
+Model 1 Iteration: 3 took: 7 seconds
+-----------
+Model1: Iteration 4
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (4) TRAIN CROSS-ENTROPY 6.83924 PERPLEXITY 114.503
+Model1: (4) VITERBI TRAIN CROSS-ENTROPY 9.21088 PERPLEXITY 592.586
+Model 1 Iteration: 4 took: 8 seconds
+-----------
+Model1: Iteration 5
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Model1: (5) TRAIN CROSS-ENTROPY 6.7664 PERPLEXITY 108.866
+Model1: (5) VITERBI TRAIN CROSS-ENTROPY 8.93473 PERPLEXITY 489.351
+Model 1 Iteration: 5 took: 7 seconds
+Entire Model1 Training took: 37 seconds
+NOTE: I am doing iterations with the HMM model!
+Read classes: #words: 25764  #classes: 51
+Read classes: #words: 2756  #classes: 51
+
+==========================================================
+Hmm Training Started at: Sun Apr 17 20:51:35 2016
+
+-----------
+Hmm: Iteration 1
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 251783 parameters.
+Hmm: (1) TRAIN CROSS-ENTROPY 6.47103 PERPLEXITY 88.7103
+Hmm: (1) VITERBI TRAIN CROSS-ENTROPY 8.75488 PERPLEXITY 431.999
+
+Hmm Iteration: 1 took: 57 seconds
+
+-----------
+Hmm: Iteration 2
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 251783 parameters.
+Hmm: (2) TRAIN CROSS-ENTROPY 6.32975 PERPLEXITY 80.4351
+Hmm: (2) VITERBI TRAIN CROSS-ENTROPY 7.53778 PERPLEXITY 185.822
+
+Hmm Iteration: 2 took: 61 seconds
+
+-----------
+Hmm: Iteration 3
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 251783 parameters.
+Hmm: (3) TRAIN CROSS-ENTROPY 6.15682 PERPLEXITY 71.3488
+Hmm: (3) VITERBI TRAIN CROSS-ENTROPY 7.12485 PERPLEXITY 139.57
+
+Hmm Iteration: 3 took: 60 seconds
+
+-----------
+Hmm: Iteration 4
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 251783 parameters.
+Hmm: (4) TRAIN CROSS-ENTROPY 6.0472 PERPLEXITY 66.1284
+Hmm: (4) VITERBI TRAIN CROSS-ENTROPY 6.86734 PERPLEXITY 116.755
+
+Hmm Iteration: 4 took: 60 seconds
+
+-----------
+Hmm: Iteration 5
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+A/D table contains 251783 parameters.
+Hmm: (5) TRAIN CROSS-ENTROPY 5.97293 PERPLEXITY 62.8104
+Hmm: (5) VITERBI TRAIN CROSS-ENTROPY 6.68611 PERPLEXITY 102.972
+
+Hmm Iteration: 5 took: 60 seconds
+
+Entire Hmm Training took: 298 seconds
+==========================================================
+Read classes: #words: 25764  #classes: 51
+Read classes: #words: 2756  #classes: 51
+Read classes: #words: 25764  #classes: 51
+Read classes: #words: 2756  #classes: 51
+
+==========================================================
+Starting H333444:  Viterbi Training
+ H333444 Training Started at: Sun Apr 17 20:56:34 2016
+
+
+---------------------
+THTo3: Iteration 1
+Reading more sentence pairs into memory ... 
+10000
+WARNING: Model2 viterbi alignment has zero score.
+Here are the different elements that made this alignment probability zero 
+Source length 9 target length 78
+best: fs[1] 1  : es[1] 1 ,  a: 0.202237 t: 0.0663773 score 0.0134239  product : 0.0134239 ss 0
+best: fs[2] 2  : es[1] 1 ,  a: 0.135437 t: 0.209975 score 0.0284383  product : 0.000381754 ss 0
+best: fs[3] 3  : es[1] 1 ,  a: 0.100112 t: 0.246228 score 0.0246503  product : 9.41034e-06 ss 0
+best: fs[4] 4  : es[4] 4 ,  a: 0.0721269 t: 0.133493 score 0.0096284  product : 9.06066e-08 ss 0
+best: fs[5] 5  : es[4] 4 ,  a: 0.0730211 t: 0.132921 score 0.00970604  product : 8.79431e-10 ss 0
+best: fs[6] 6  : es[0] 0 ,  a: 0.198739 t: 0.0614242 score 0.0122074  product : 1.07355e-11 ss 0
+best: fs[7] 7  : es[0] 0 ,  a: 0.197834 t: 0.0452213 score 0.00894631  product : 9.60436e-14 ss 0
+best: fs[8] 8  : es[3] 3 ,  a: 0.0681024 t: 0.104504 score 0.00711697  product : 6.8354e-16 ss 0
+best: fs[9] 9  : es[3] 3 ,  a: 0.0723195 t: 0.110213 score 0.00797056  product : 5.4482e-18 ss 0
+best: fs[10] 10  : es[3] 3 ,  a: 0.0764859 t: 0.142515 score 0.0109004  product : 5.93874e-20 ss 0
+best: fs[11] 11  : es[0] 0 ,  a: 0.202822 t: 0.0625424 score 0.012685  product : 7.53329e-22 ss 0
+best: fs[12] 12  : es[9] 9 ,  a: 0.197401 t: 0.0153238 score 0.00302492  product : 2.27876e-24 ss 0
+best: fs[13] 13  : es[9] 9 ,  a: 0.204435 t: 0.0151888 score 0.00310514  product : 7.07586e-27 ss 0
+best: fs[14] 14  : es[9] 9 ,  a: 0.200803 t: 0.0141682 score 0.00284502  product : 2.0131e-29 ss 0
+best: fs[15] 15  : es[9] 9 ,  a: 0.206903 t: 0.0148944 score 0.0030817  product : 6.20378e-32 ss 0
+best: fs[16] 16  : es[9] 9 ,  a: 0.192084 t: 0.0147612 score 0.00283538  product : 1.75901e-34 ss 0
+best: fs[17] 17  : es[9] 9 ,  a: 0.19062 t: 0.0146741 score 0.00279719  product : 4.92027e-37 ss 0
+best: fs[18] 18  : es[9] 9 ,  a: 0.193442 t: 0.0154023 score 0.00297944  product : 1.46596e-39 ss 0
+best: fs[19] 19  : es[0] 0 ,  a: 0.219111 t: 0.0665041 score 0.0145718  product : 2.13617e-41 ss 0
+best: fs[20] 20  : es[4] 4 ,  a: 0.0878504 t: 0.00729095 score 0.000640513  product : 1.36824e-44 ss 0
+best: fs[21] 21  : es[0] 0 ,  a: 0.208048 t: 0.0487497 score 0.0101423  product : 1.38771e-46 ss 0
+best: fs[22] 22  : es[4] 4 ,  a: 0.079019 t: 0.00895268 score 0.000707432  product : 9.81712e-50 ss 0
+best: fs[23] 23  : es[3] 3 ,  a: 0.0888348 t: 0.104504 score 0.00928359  product : 9.11382e-52 ss 0
+best: fs[24] 24  : es[1] 1 ,  a: 0.0643627 t: 0.209975 score 0.0135145  product : 1.23169e-53 ss 0
+best: fs[25] 25  : es[0] 0 ,  a: 0.190477 t: 0.0202727 score 0.00386148  product : 4.75615e-56 ss 0
+best: fs[26] 26  : es[5] 5 ,  a: 0.0858434 t: 0.00952065 score 0.000817285  product : 3.88713e-59 ss 0
+best: fs[27] 27  : es[5] 5 ,  a: 0.0797302 t: 0.0200079 score 0.00159524  product : 6.20089e-62 ss 0
+best: fs[28] 28  : es[5] 5 ,  a: 0.0849169 t: 0.118406 score 0.0100547  product : 6.23482e-64 ss 0
+best: fs[29] 29  : es[5] 5 ,  a: 0.0719813 t: 0.118406 score 0.00852306  product : 5.31397e-66 ss 0
+best: fs[30] 30  : es[5] 5 ,  a: 0.0979202 t: 0.0401116 score 0.00392774  product : 2.08719e-68 ss 0
+best: fs[31] 31  : es[5] 5 ,  a: 0.101974 t: 0.118406 score 0.0120744  product : 2.52015e-70 ss 0
+best: fs[32] 32  : es[5] 5 ,  a: 0.107507 t: 0.0471414 score 0.00506803  product : 1.27722e-72 ss 0
+best: fs[33] 33  : es[5] 5 ,  a: 0.11076 t: 0.0401116 score 0.00444276  product : 5.67438e-75 ss 0
+best: fs[34] 34  : es[5] 5 ,  a: 0.134013 t: 0.0471414 score 0.00631754  product : 3.58481e-77 ss 0
+best: fs[35] 35  : es[5] 5 ,  a: 0.222093 t: 0.0200079 score 0.00444362  product : 1.59296e-79 ss 0
+best: fs[36] 36  : es[5] 5 ,  a: 0.371436 t: 0.0200514 score 0.0074478  product : 1.1864e-81 ss 0
+best: fs[37] 37  : es[5] 5 ,  a: 0.332859 t: 0.118406 score 0.0394127  product : 4.67593e-83 ss 0
+best: fs[38] 38  : es[5] 5 ,  a: 0.355362 t: 0.118406 score 0.0420772  product : 1.9675e-84 ss 0
+best: fs[39] 39  : es[5] 5 ,  a: 0.560168 t: 0.118406 score 0.0663275  product : 1.30499e-85 ss 0
+best: fs[40] 40  : es[5] 5 ,  a: 0.518906 t: 0.0200439 score 0.0104009  product : 1.35731e-87 ss 0
+best: fs[41] 41  : es[5] 5 ,  a: 0.998872 t: 0.0200439 score 0.0200213  product : 2.71752e-89 ss 0
+best: fs[42] 42  : es[5] 5 ,  a: 0.838395 t: 0.00841161 score 0.00705226  product : 1.91646e-91 ss 0
+best: fs[43] 43  : es[9] 9 ,  a: 0.99504 t: 0.102263 score 0.101756  product : 1.95012e-92 ss 0
+best: fs[44] 44  : es[5] 5 ,  a: 0.629014 t: 0.00630784 score 0.00396772  product : 7.73751e-95 ss 0
+best: fs[45] 45  : es[5] 5 ,  a: 0.987602 t: 0.00990381 score 0.00978102  product : 7.56808e-97 ss 0
+best: fs[46] 46  : es[5] 5 ,  a: 0.999985 t: 0.0201035 score 0.0201032  product : 1.52143e-98 ss 0
+best: fs[47] 47  : es[5] 5 ,  a: 0.999974 t: 0.0100433 score 0.010043  product : 1.52798e-100 ss 0
+best: fs[48] 48  : es[5] 5 ,  a: 0.999989 t: 0.0100345 score 0.0100344  product : 1.53322e-102 ss 0
+best: fs[49] 49  : es[5] 5 ,  a: 0.999986 t: 0.0201035 score 0.0201032  product : 3.08228e-104 ss 0
+best: fs[50] 50  : es[5] 5 ,  a: 0.998008 t: 0.118406 score 0.118171  product : 3.64235e-105 ss 0
+best: fs[51] 51  : es[5] 5 ,  a: 0.998008 t: 0.118406 score 0.118171  product : 4.30419e-106 ss 0
+best: fs[52] 52  : es[5] 5 ,  a: 0.999977 t: 0.0401116 score 0.0401107  product : 1.72644e-107 ss 0
+best: fs[53] 53  : es[5] 5 ,  a: 0.998364 t: 0.118406 score 0.118213  product : 2.04087e-108 ss 0
+best: fs[54] 54  : es[5] 5 ,  a: 0.999994 t: 0.0471414 score 0.0471411  product : 9.6209e-110 ss 0
+best: fs[55] 55  : es[5] 5 ,  a: 0.999977 t: 0.0401116 score 0.0401107  product : 3.85901e-111 ss 0
+best: fs[56] 56  : es[5] 5 ,  a: 0.999994 t: 0.0471414 score 0.0471411  product : 1.81918e-112 ss 0
+best: fs[57] 57  : es[5] 5 ,  a: 0.99994 t: 0.0100275 score 0.0100269  product : 1.82408e-114 ss 0
+best: fs[58] 58  : es[5] 5 ,  a: 0.999741 t: 0.0200514 score 0.0200462  product : 3.65659e-116 ss 0
+best: fs[59] 59  : es[5] 5 ,  a: 0.992555 t: 0.118406 score 0.117525  product : 4.2974e-117 ss 0
+best: fs[60] 60  : es[5] 5 ,  a: 0.968173 t: 0.118406 score 0.114638  product : 4.92645e-118 ss 0
+best: fs[61] 61  : es[5] 5 ,  a: 0.858895 t: 0.118406 score 0.101699  product : 5.01014e-119 ss 0
+best: fs[62] 62  : es[8] 8 ,  a: 0.61247 t: 0.0561295 score 0.0343777  product : 1.72237e-120 ss 0
+best: fs[63] 63  : es[4] 4 ,  a: 0.955255 t: 0.00907898 score 0.00867274  product : 1.49377e-122 ss 0
+best: fs[64] 64  : es[4] 4 ,  a: 0.834882 t: 0.0386133 score 0.0322376  product : 4.81554e-124 ss 0
+best: fs[65] 65  : es[4] 4 ,  a: 0.809116 t: 0.0171277 score 0.0138583  product : 6.6735e-126 ss 0
+best: fs[66] 66  : es[0] 0 ,  a: 0.922018 t: 0.0426445 score 0.039319  product : 2.62395e-127 ss 0
+best: fs[67] 67  : es[4] 4 ,  a: 0.979643 t: 0.0169323 score 0.0165876  product : 4.35252e-129 ss 0
+best: fs[68] 68  : es[0] 0 ,  a: 0.50291 t: 0.0170068 score 0.00855288  product : 3.72266e-131 ss 0
+best: fs[69] 69  : es[0] 0 ,  a: 0.737642 t: 0.0253001 score 0.0186624  product : 6.94738e-133 ss 0
+best: fs[70] 70  : es[4] 4 ,  a: 0.524339 t: 0.0161022 score 0.00844299  product : 5.86566e-135 ss 0
+best: fs[71] 71  : es[3] 3 ,  a: 0.225463 t: 0.0999367 score 0.022532  product : 1.32165e-136 ss 0
+best: fs[72] 72  : es[0] 0 ,  a: 0.532102 t: 0.0665041 score 0.035387  product : 4.67693e-138 ss 0
+best: fs[73] 73  : es[4] 4 ,  a: 0.945168 t: 0.133493 score 0.126173  product : 5.90101e-139 ss 0
+best: fs[74] 74  : es[4] 4 ,  a: 0.914322 t: 0.132921 score 0.121533  product : 7.17166e-140 ss 0
+best: fs[75] 75  : es[1] 1 ,  a: 0.219982 t: 0.0797322 score 0.0175396  product : 1.25788e-141 ss 0
+best: fs[76] 76  : es[0] 0 ,  a: 0.530154 t: 0.0286171 score 0.0151714  product : 1.90839e-143 ss 0
+best: fs[77] 77  : es[2] 2 ,  a: 0.513454 t: 0.124892 score 0.0641261  product : 1.22378e-144 ss 0
+best: fs[78] 78  : es[6] 6 ,  a: 0.562632 t: 0.153706 score 0.0864801  product : 1.05832e-145 ss 0
+Fert[0] selected 9
+Fert[1] selected 9
+Fert[2] selected 6
+Fert[3] selected 8
+Fert[4] selected 9
+Fert[5] selected 9
+Fert[6] selected 9
+Fert[7] selected 1
+Fert[8] selected 9
+Fert[9] selected 9
+20000
+WARNING: Model2 viterbi alignment has zero score.
+Here are the different elements that made this alignment probability zero 
+Source length 33 target length 78
+best: fs[1] 1  : es[33] 33 ,  a: 0.0688301 t: 0.0712724 score 0.00490569  product : 0.00490569 ss 0
+best: fs[2] 2  : es[9] 9 ,  a: 0.0348762 t: 0.0345428 score 0.00120472  product : 5.90999e-06 ss 0
+best: fs[3] 3  : es[22] 22 ,  a: 0.0127254 t: 0.100534 score 0.00127933  product : 7.56084e-09 ss 0
+best: fs[4] 4  : es[9] 9 ,  a: 0.0399932 t: 0.0364636 score 0.0014583  product : 1.10259e-11 ss 0
+best: fs[5] 5  : es[0] 0 ,  a: 0.184095 t: 0.0426445 score 0.00785063  product : 8.65605e-14 ss 0
+best: fs[6] 6  : es[12] 12 ,  a: 0.0280045 t: 0.205874 score 0.00576538  product : 4.99054e-16 ss 0
+best: fs[7] 7  : es[12] 12 ,  a: 0.0334951 t: 0.170754 score 0.00571944  product : 2.85431e-18 ss 0
+best: fs[8] 8  : es[0] 0 ,  a: 0.193298 t: 0.0487497 score 0.00942322  product : 2.68968e-20 ss 0
+best: fs[9] 9  : es[7] 7 ,  a: 0.0292981 t: 0.130787 score 0.00383182  product : 1.03063e-22 ss 0
+best: fs[10] 10  : es[0] 0 ,  a: 0.20572 t: 0.0253001 score 0.00520475  product : 5.3642e-25 ss 0
+best: fs[11] 11  : es[7] 7 ,  a: 0.0331298 t: 0.194442 score 0.00644181  product : 3.45551e-27 ss 0
+best: fs[12] 12  : es[0] 0 ,  a: 0.202593 t: 0.0286171 score 0.00579763  product : 2.00338e-29 ss 0
+best: fs[13] 13  : es[7] 7 ,  a: 0.0288075 t: 0.17405 score 0.00501393  product : 1.00448e-31 ss 0
+best: fs[14] 14  : es[24] 24 ,  a: 0.0240569 t: 0.0209824 score 0.000504772  product : 5.07034e-35 ss 0
+best: fs[15] 15  : es[0] 0 ,  a: 0.18556 t: 0.0542001 score 0.0100573  product : 5.09942e-37 ss 0
+best: fs[16] 16  : es[0] 0 ,  a: 0.202876 t: 0.0239477 score 0.00485841  product : 2.4775e-39 ss 0
+best: fs[17] 17  : es[22] 22 ,  a: 0.025253 t: 0.0968573 score 0.00244594  product : 6.05983e-42 ss 0
+best: fs[18] 18  : es[22] 22 ,  a: 0.0281336 t: 0.100534 score 0.00282839  product : 1.71395e-44 ss 0
+best: fs[19] 19  : es[22] 22 ,  a: 0.0261125 t: 0.0961958 score 0.00251192  product : 4.30531e-47 ss 0
+best: fs[20] 20  : es[0] 0 ,  a: 0.202516 t: 0.0665041 score 0.0134681  product : 5.79845e-49 ss 0
+best: fs[21] 21  : es[6] 6 ,  a: 0.0219243 t: 0.0361877 score 0.000793392  product : 4.60044e-52 ss 0
+best: fs[22] 22  : es[0] 0 ,  a: 0.208334 t: 0.0614242 score 0.0127968  product : 5.88707e-54 ss 0
+best: fs[23] 23  : es[16] 16 ,  a: 0.0381891 t: 0.288737 score 0.0110266  product : 6.49145e-56 ss 0
+best: fs[24] 24  : es[18] 18 ,  a: 0.0362536 t: 0.205874 score 0.00746367  product : 4.845e-58 ss 0
+best: fs[25] 25  : es[18] 18 ,  a: 0.0341812 t: 0.170754 score 0.00583658  product : 2.82782e-60 ss 0
+best: fs[26] 26  : es[0] 0 ,  a: 0.208266 t: 0.0487497 score 0.0101529  product : 2.87106e-62 ss 0
+best: fs[27] 27  : es[0] 0 ,  a: 0.192317 t: 0.0614242 score 0.0118129  product : 3.39155e-64 ss 0
+best: fs[28] 28  : es[0] 0 ,  a: 0.208344 t: 0.0452213 score 0.0094216  product : 3.19539e-66 ss 0
+best: fs[29] 29  : es[0] 0 ,  a: 0.215443 t: 0.0625424 score 0.0134743  product : 4.30558e-68 ss 0
+best: fs[30] 30  : es[0] 0 ,  a: 0.179351 t: 0.0286171 score 0.00513249  product : 2.20983e-70 ss 0
+best: fs[31] 31  : es[0] 0 ,  a: 0.203812 t: 0.0449557 score 0.00916252  product : 2.02476e-72 ss 0
+best: fs[32] 32  : es[3] 3 ,  a: 0.0121233 t: 0.284988 score 0.003455  product : 6.99556e-75 ss 0
+best: fs[33] 33  : es[7] 7 ,  a: 0.0164152 t: 0.13674 score 0.00224462  product : 1.57024e-77 ss 0
+best: fs[34] 34  : es[27] 27 ,  a: 0.0347944 t: 0.211448 score 0.00735719  product : 1.15525e-79 ss 0
+best: fs[35] 35  : es[0] 0 ,  a: 0.211662 t: 0.0286171 score 0.00605715  product : 6.99754e-82 ss 0
+best: fs[36] 36  : es[33] 33 ,  a: 0.0730461 t: 0.0169398 score 0.00123738  product : 8.65863e-85 ss 0
+best: fs[37] 37  : es[33] 33 ,  a: 0.0751806 t: 0.0592413 score 0.00445379  product : 3.85637e-87 ss 0
+best: fs[38] 38  : es[0] 0 ,  a: 0.214496 t: 0.0665041 score 0.0142649  product : 5.50107e-89 ss 0
+best: fs[39] 39  : es[0] 0 ,  a: 0.224244 t: 0.0672555 score 0.0150816  product : 8.29651e-91 ss 0
+best: fs[40] 40  : es[13] 13 ,  a: 0.0200414 t: 0.0570648 score 0.00114366  product : 9.4884e-94 ss 0
+best: fs[41] 41  : es[13] 13 ,  a: 0.0223712 t: 0.0572377 score 0.00128048  product : 1.21497e-96 ss 0
+best: fs[42] 42  : es[13] 13 ,  a: 0.0235571 t: 0.114477 score 0.00269674  product : 3.27646e-99 ss 0
+best: fs[43] 43  : es[13] 13 ,  a: 0.0198104 t: 0.0858577 score 0.00170088  product : 5.57285e-102 ss 0
+best: fs[44] 44  : es[13] 13 ,  a: 0.021237 t: 0.114477 score 0.00243114  product : 1.35484e-104 ss 0
+best: fs[45] 45  : es[13] 13 ,  a: 0.0236555 t: 0.0572375 score 0.00135398  product : 1.83442e-107 ss 0
+best: fs[46] 46  : es[13] 13 ,  a: 0.0172719 t: 0.0286192 score 0.000494308  product : 9.06771e-111 ss 0
+best: fs[47] 47  : es[13] 13 ,  a: 0.0204961 t: 0.0572384 score 0.00117316  product : 1.06379e-113 ss 0
+best: fs[48] 48  : es[13] 13 ,  a: 0.0201771 t: 0.0286192 score 0.000577453  product : 6.14288e-117 ss 0
+best: fs[49] 49  : es[13] 13 ,  a: 0.021881 t: 0.114477 score 0.00250487  product : 1.53871e-119 ss 0
+best: fs[50] 50  : es[13] 13 ,  a: 0.017993 t: 0.114477 score 0.00205978  product : 3.1694e-122 ss 0
+best: fs[51] 51  : es[13] 13 ,  a: 0.0188594 t: 0.0572384 score 0.00107948  product : 3.4213e-125 ss 0
+best: fs[52] 52  : es[13] 13 ,  a: 0.0164986 t: 0.114477 score 0.0018887  product : 6.46183e-128 ss 0
+best: fs[53] 53  : es[13] 13 ,  a: 0.01924 t: 0.0572384 score 0.00110127  product : 7.11621e-131 ss 0
+best: fs[54] 54  : es[13] 13 ,  a: 0.0178259 t: 0.0858577 score 0.00153049  product : 1.08913e-133 ss 0
+best: fs[55] 55  : es[13] 13 ,  a: 0.017752 t: 0.114477 score 0.0020322  product : 2.21333e-136 ss 0
+best: fs[56] 56  : es[13] 13 ,  a: 0.022098 t: 0.0286192 score 0.000632426  product : 1.39977e-139 ss 0
+best: fs[57] 57  : es[13] 13 ,  a: 0.0281189 t: 0.114477 score 0.00321897  product : 4.5058e-142 ss 0
+best: fs[58] 58  : es[13] 13 ,  a: 0.0208725 t: 0.114477 score 0.00238942  product : 1.07663e-144 ss 0
+best: fs[59] 59  : es[13] 13 ,  a: 0.0285776 t: 0.0572384 score 0.00163574  product : 1.76108e-147 ss 0
+best: fs[60] 60  : es[13] 13 ,  a: 0.0357161 t: 0.114477 score 0.00408867  product : 7.20046e-150 ss 0
+best: fs[61] 61  : es[13] 13 ,  a: 0.0251776 t: 0.0572384 score 0.00144113  product : 1.03768e-152 ss 0
+best: fs[62] 62  : es[13] 13 ,  a: 0.0169287 t: 0.114477 score 0.00193795  product : 2.01097e-155 ss 0
+best: fs[63] 63  : es[13] 13 ,  a: 0.0160353 t: 0.0572384 score 0.000917833  product : 1.84573e-158 ss 0
+best: fs[64] 64  : es[13] 13 ,  a: 0.0206473 t: 0.0572384 score 0.00118182  product : 2.18132e-161 ss 0
+best: fs[65] 65  : es[13] 13 ,  a: 0.0214503 t: 0.0572384 score 0.00122778  product : 2.67818e-164 ss 0
+best: fs[66] 66  : es[13] 13 ,  a: 0.0225737 t: 0.0286191 score 0.000646041  product : 1.73022e-167 ss 0
+best: fs[67] 67  : es[13] 13 ,  a: 0.0265567 t: 0.0570648 score 0.00151545  product : 2.62206e-170 ss 0
+best: fs[68] 68  : es[13] 13 ,  a: 0.0242709 t: 0.0572377 score 0.00138921  product : 3.64259e-173 ss 0
+best: fs[69] 69  : es[13] 13 ,  a: 0.0286051 t: 0.114477 score 0.00327462  product : 1.19281e-175 ss 0
+best: fs[70] 70  : es[13] 13 ,  a: 0.0378782 t: 0.0858577 score 0.00325214  product : 3.87919e-178 ss 0
+best: fs[71] 71  : es[13] 13 ,  a: 0.0470344 t: 0.114477 score 0.00538436  product : 2.08869e-180 ss 0
+best: fs[72] 72  : es[13] 13 ,  a: 0.0511196 t: 0.0572375 score 0.00292596  product : 6.11143e-183 ss 0
+best: fs[73] 73  : es[0] 0 ,  a: 0.218109 t: 0.0449557 score 0.00980522  product : 5.99239e-185 ss 0
+best: fs[74] 74  : es[13] 13 ,  a: 0.0945423 t: 0.028442 score 0.00268897  product : 1.61134e-187 ss 0
+best: fs[75] 75  : es[13] 13 ,  a: 0.109806 t: 0.0265086 score 0.00291079  product : 4.69026e-190 ss 0
+best: fs[76] 76  : es[0] 0 ,  a: 0.352582 t: 0.0614242 score 0.0216571  product : 1.01577e-191 ss 0
+best: fs[77] 77  : es[0] 0 ,  a: 0.151369 t: 0.0542001 score 0.00820424  product : 8.33364e-194 ss 0
+best: fs[78] 78  : es[25] 25 ,  a: 0.085148 t: 0.0983956 score 0.00837818  product : 6.98208e-196 ss 0
+Fert[0] selected 9
+Fert[1] selected 1
+Fert[2] selected 1
+Fert[3] selected 1
+Fert[4] selected 0
+Fert[5] selected 0
+Fert[6] selected 2
+Fert[7] selected 8
+Fert[8] selected 0
+Fert[9] selected 2
+Fert[10] selected 0
+Fert[11] selected 0
+Fert[12] selected 2
+Fert[13] selected 9
+Fert[14] selected 0
+Fert[15] selected 0
+Fert[16] selected 4
+Fert[17] selected 0
+Fert[18] selected 2
+Fert[19] selected 0
+Fert[20] selected 2
+Fert[21] selected 0
+Fert[22] selected 5
+Fert[23] selected 0
+Fert[24] selected 1
+Fert[25] selected 1
+Fert[26] selected 0
+Fert[27] selected 5
+Fert[28] selected 3
+Fert[29] selected 6
+Fert[30] selected 4
+Fert[31] selected 0
+Fert[32] selected 1
+Fert[33] selected 9
+30000
+WARNING: Model2 viterbi alignment has zero score.
+Here are the different elements that made this alignment probability zero 
+Source length 8 target length 59
+best: fs[1] 1  : es[1] 1 ,  a: 0.19771 t: 0.0531932 score 0.0105168  product : 0.0105168 ss 0
+best: fs[2] 2  : es[3] 3 ,  a: 0.0786394 t: 0.121423 score 0.00954866  product : 0.000100422 ss 0
+best: fs[3] 3  : es[1] 1 ,  a: 0.100942 t: 0.0317536 score 0.00320526  product : 3.21877e-07 ss 0
+best: fs[4] 4  : es[2] 2 ,  a: 0.0823433 t: 0.191116 score 0.0157372  product : 5.06544e-09 ss 0
+best: fs[5] 5  : es[0] 0 ,  a: 0.187169 t: 0.0672555 score 0.0125881  product : 6.37644e-11 ss 0
+best: fs[6] 6  : es[8] 8 ,  a: 0.222877 t: 0.0566277 score 0.012621  product : 8.04769e-13 ss 0
+best: fs[7] 7  : es[0] 0 ,  a: 0.185151 t: 0.110734 score 0.0205026  product : 1.64998e-14 ss 0
+best: fs[8] 8  : es[3] 3 ,  a: 0.0852246 t: 0.00756064 score 0.000644353  product : 1.06317e-17 ss 0
+best: fs[9] 9  : es[5] 5 ,  a: 0.0887044 t: 0.00513201 score 0.000455232  product : 4.83989e-21 ss 0
+best: fs[10] 10  : es[0] 0 ,  a: 0.207481 t: 0.0665041 score 0.0137984  product : 6.67826e-23 ss 0
+best: fs[11] 11  : es[7] 7 ,  a: 0.0708038 t: 0.153706 score 0.010883  product : 7.26795e-25 ss 0
+best: fs[12] 12  : es[0] 0 ,  a: 0.21642 t: 0.0452213 score 0.00978679  product : 7.11299e-27 ss 0
+best: fs[13] 13  : es[0] 0 ,  a: 0.221521 t: 0.0202727 score 0.00449082  product : 3.19431e-29 ss 0
+best: fs[14] 14  : es[5] 5 ,  a: 0.083906 t: 0.103769 score 0.00870684  product : 2.78124e-31 ss 0
+best: fs[15] 15  : es[5] 5 ,  a: 0.0879321 t: 0.0876725 score 0.00770923  product : 2.14412e-33 ss 0
+best: fs[16] 16  : es[0] 0 ,  a: 0.214506 t: 0.0614242 score 0.0131759  product : 2.82506e-35 ss 0
+best: fs[17] 17  : es[0] 0 ,  a: 0.215597 t: 0.0452213 score 0.00974956  product : 2.75431e-37 ss 0
+best: fs[18] 18  : es[0] 0 ,  a: 0.20722 t: 0.0625424 score 0.01296  product : 3.5696e-39 ss 0
+best: fs[19] 19  : es[8] 8 ,  a: 0.239425 t: 0.102617 score 0.024569  product : 8.77015e-41 ss 0
+best: fs[20] 20  : es[8] 8 ,  a: 0.188432 t: 0.239508 score 0.0451309  product : 3.95805e-42 ss 0
+best: fs[21] 21  : es[5] 5 ,  a: 0.10793 t: 0.0140632 score 0.00151785  product : 6.00772e-45 ss 0
+best: fs[22] 22  : es[5] 5 ,  a: 0.104159 t: 0.00937553 score 0.000976544  product : 5.8668e-48 ss 0
+best: fs[23] 23  : es[5] 5 ,  a: 0.107123 t: 0.00938426 score 0.00100527  product : 5.89771e-51 ss 0
+best: fs[24] 24  : es[5] 5 ,  a: 0.102148 t: 0.00471552 score 0.000481683  product : 2.84082e-54 ss 0
+best: fs[25] 25  : es[5] 5 ,  a: 0.111966 t: 0.0187511 score 0.00209949  product : 5.96428e-57 ss 0
+best: fs[26] 26  : es[5] 5 ,  a: 0.123571 t: 0.00468772 score 0.000579265  product : 3.4549e-60 ss 0
+best: fs[27] 27  : es[5] 5 ,  a: 0.116803 t: 0.0140632 score 0.00164262  product : 5.67509e-63 ss 0
+best: fs[28] 28  : es[5] 5 ,  a: 0.0767871 t: 0.00937582 score 0.000719942  product : 4.08574e-66 ss 0
+best: fs[29] 29  : es[5] 5 ,  a: 0.0800958 t: 0.0139088 score 0.00111404  product : 4.55166e-69 ss 0
+best: fs[30] 30  : es[5] 5 ,  a: 0.092605 t: 0.0145057 score 0.0013433  product : 6.11426e-72 ss 0
+best: fs[31] 31  : es[5] 5 ,  a: 0.136005 t: 0.0187511 score 0.00255025  product : 1.55929e-74 ss 0
+best: fs[32] 32  : es[5] 5 ,  a: 0.279716 t: 0.00472097 score 0.00132053  product : 2.05909e-77 ss 0
+best: fs[33] 33  : es[5] 5 ,  a: 0.375037 t: 0.0046913 score 0.00175941  product : 3.62279e-80 ss 0
+best: fs[34] 34  : es[5] 5 ,  a: 0.437822 t: 0.0187511 score 0.00820965  product : 2.97419e-82 ss 0
+best: fs[35] 35  : es[5] 5 ,  a: 0.44266 t: 0.0140637 score 0.00622546  product : 1.85157e-84 ss 0
+best: fs[36] 36  : es[5] 5 ,  a: 0.479716 t: 0.0140637 score 0.00674661  product : 1.24918e-86 ss 0
+best: fs[37] 37  : es[5] 5 ,  a: 0.346303 t: 0.0140637 score 0.00487032  product : 6.0839e-89 ss 0
+best: fs[38] 38  : es[5] 5 ,  a: 0.359551 t: 0.00937538 score 0.00337092  product : 2.05084e-91 ss 0
+best: fs[39] 39  : es[5] 5 ,  a: 0.420266 t: 0.00937582 score 0.00394034  product : 8.081e-94 ss 0
+best: fs[40] 40  : es[5] 5 ,  a: 0.500495 t: 0.0145057 score 0.00726005  product : 5.86684e-96 ss 0
+best: fs[41] 41  : es[5] 5 ,  a: 0.500031 t: 0.0145057 score 0.00725331  product : 4.2554e-98 ss 0
+best: fs[42] 42  : es[5] 5 ,  a: 0.500035 t: 0.00468946 score 0.00234489  product : 9.97847e-101 ss 0
+best: fs[43] 43  : es[5] 5 ,  a: 0.500345 t: 0.00471775 score 0.0023605  product : 2.35542e-103 ss 0
+best: fs[44] 44  : es[5] 5 ,  a: 0.500097 t: 0.00937538 score 0.0046886  product : 1.10436e-105 ss 0
+best: fs[45] 45  : es[5] 5 ,  a: 0.499999 t: 0.00922931 score 0.00461465  product : 5.09624e-108 ss 0
+best: fs[46] 46  : es[5] 5 ,  a: 0.500092 t: 0.00468806 score 0.00234446  product : 1.19479e-110 ss 0
+best: fs[47] 47  : es[5] 5 ,  a: 0.501965 t: 0.0139088 score 0.00698174  product : 8.34174e-113 ss 0
+best: fs[48] 48  : es[0] 0 ,  a: 0.443532 t: 0.110734 score 0.0491142  product : 4.09698e-114 ss 0
+best: fs[49] 49  : es[5] 5 ,  a: 0.72282 t: 0.00374038 score 0.00270362  product : 1.10767e-116 ss 0
+best: fs[50] 50  : es[5] 5 ,  a: 0.980191 t: 0.00583448 score 0.00571891  product : 6.33465e-119 ss 0
+best: fs[51] 51  : es[5] 5 ,  a: 0.998907 t: 0.00874259 score 0.00873304  product : 5.53207e-121 ss 0
+best: fs[52] 52  : es[5] 5 ,  a: 0.999971 t: 0.112205 score 0.112201  product : 6.20706e-122 ss 0
+best: fs[53] 53  : es[5] 5 ,  a: 0.967536 t: 0.00557173 score 0.00539085  product : 3.34613e-124 ss 0
+best: fs[54] 54  : es[5] 5 ,  a: 0.971381 t: 0.0047796 score 0.00464281  product : 1.55355e-126 ss 0
+best: fs[55] 55  : es[5] 5 ,  a: 0.999992 t: 0.0140632 score 0.0140631  product : 2.18477e-128 ss 0
+best: fs[56] 56  : es[5] 5 ,  a: 0.99999 t: 0.00937553 score 0.00937543  product : 2.04832e-130 ss 0
+best: fs[57] 57  : es[5] 5 ,  a: 0.99999 t: 0.00938426 score 0.00938417  product : 1.92217e-132 ss 0
+best: fs[58] 58  : es[5] 5 ,  a: 0.99998 t: 0.00591919 score 0.00591908  product : 1.13775e-134 ss 0
+best: fs[59] 59  : es[5] 5 ,  a: 0.999989 t: 0.0187511 score 0.0187509  product : 2.13338e-136 ss 0
+Fert[0] selected 9
+Fert[1] selected 7
+Fert[2] selected 1
+Fert[3] selected 3
+Fert[4] selected 9
+Fert[5] selected 9
+Fert[6] selected 6
+Fert[7] selected 6
+Fert[8] selected 9
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1375.84 #alsophisticatedcountcollection: 0 #hcsteps: 0
+#peggingImprovements: 0
+A/D table contains 251783 parameters.
+A/D table contains 195314 parameters.
+NTable contains 257650 parameter.
+p0_count is 989930 and p1 is 376733; p0 is 0.999 p1: 0.001
+THTo3: TRAIN CROSS-ENTROPY 6.83503 PERPLEXITY 114.17
+THTo3: (1) TRAIN VITERBI CROSS-ENTROPY 7.03314 PERPLEXITY 130.974
+
+THTo3 Viterbi Iteration : 1 took: 72 seconds
+
+---------------------
+Model3: Iteration 2
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 1.00001 0 71 45
+WARNING: already 41 iterations in hillclimb: 1.18118 2 70 2
+WARNING: already 42 iterations in hillclimb: 1.08371 2 32 14
+WARNING: already 43 iterations in hillclimb: 1.00001 0 32 14
+WARNING: already 41 iterations in hillclimb: 1.00001 0 33 18
+WARNING: already 41 iterations in hillclimb: 1.00001 0 19 39
+WARNING: already 41 iterations in hillclimb: 1.91399 2 67 38
+WARNING: already 42 iterations in hillclimb: 1.34117 2 27 37
+WARNING: already 43 iterations in hillclimb: 3.67425 2 26 13
+WARNING: already 44 iterations in hillclimb: 1.00001 0 26 13
+WARNING: already 41 iterations in hillclimb: 1.00001 0 27 2
+WARNING: already 41 iterations in hillclimb: 4.49042 2 58 39
+WARNING: already 42 iterations in hillclimb: 1.00001 0 58 39
+WARNING: already 41 iterations in hillclimb: 1.00001 0 4 7
+WARNING: already 41 iterations in hillclimb: 1.06762 2 22 9
+WARNING: already 42 iterations in hillclimb: 1.57693 2 75 40
+WARNING: already 43 iterations in hillclimb: 1.00001 0 75 40
+WARNING: already 41 iterations in hillclimb: 1.92236 2 35 35
+WARNING: already 42 iterations in hillclimb: 1.00001 0 35 35
+WARNING: already 41 iterations in hillclimb: 1.26044 2 70 44
+WARNING: already 42 iterations in hillclimb: 1.72456 2 50 44
+WARNING: already 43 iterations in hillclimb: 1.00001 0 50 44
+WARNING: already 41 iterations in hillclimb: 1.13106 2 57 51
+WARNING: already 42 iterations in hillclimb: 1.12924 2 42 51
+WARNING: already 43 iterations in hillclimb: 1.10209 2 53 33
+WARNING: already 44 iterations in hillclimb: 1.00001 0 53 33
+WARNING: already 41 iterations in hillclimb: 1.34054 2 60 0
+WARNING: already 42 iterations in hillclimb: 1.2926 2 50 33
+WARNING: already 43 iterations in hillclimb: 5.04236 2 3 11
+WARNING: already 44 iterations in hillclimb: 1.00001 0 3 11
+WARNING: already 41 iterations in hillclimb: 1.85947 2 72 1
+WARNING: already 42 iterations in hillclimb: 1.15736 2 11 18
+WARNING: already 43 iterations in hillclimb: 2.60625 2 12 18
+WARNING: already 44 iterations in hillclimb: 1.23897 2 70 33
+WARNING: already 45 iterations in hillclimb: 1.19079 2 46 33
+WARNING: already 46 iterations in hillclimb: 1.73263 2 73 33
+WARNING: already 47 iterations in hillclimb: 4.32818 2 9 18
+WARNING: already 48 iterations in hillclimb: 1.00001 0 9 18
+WARNING: already 41 iterations in hillclimb: 13.4939 2 55 24
+WARNING: already 42 iterations in hillclimb: 1.58559 2 70 33
+WARNING: already 43 iterations in hillclimb: 1.47467 2 29 24
+WARNING: already 44 iterations in hillclimb: 1.73501 1 29 49
+WARNING: already 45 iterations in hillclimb: 1.36379 2 4 33
+WARNING: already 46 iterations in hillclimb: 1.31293 2 22 21
+WARNING: already 47 iterations in hillclimb: 1.26143 2 75 33
+WARNING: already 48 iterations in hillclimb: 1.14191 2 39 24
+WARNING: already 49 iterations in hillclimb: 1.28197 2 55 33
+WARNING: already 50 iterations in hillclimb: 1.05507 2 63 24
+WARNING: already 51 iterations in hillclimb: 1.00001 0 63 24
+WARNING: already 41 iterations in hillclimb: 1.93043 2 12 4
+WARNING: already 42 iterations in hillclimb: 1.00001 0 12 4
+WARNING: already 41 iterations in hillclimb: 1.00001 0 79 27
+WARNING: already 41 iterations in hillclimb: 1.00001 0 46 0
+WARNING: already 41 iterations in hillclimb: 1.47544 2 55 35
+WARNING: already 42 iterations in hillclimb: 1.10885 2 43 18
+WARNING: already 43 iterations in hillclimb: 1.10532 2 60 45
+WARNING: already 44 iterations in hillclimb: 1.21017 2 5 45
+WARNING: already 45 iterations in hillclimb: 1.00001 0 5 45
+WARNING: already 41 iterations in hillclimb: 1.00026 2 5 20
+WARNING: already 42 iterations in hillclimb: 7.84199 2 32 20
+WARNING: already 43 iterations in hillclimb: 1.86149 2 17 20
+WARNING: already 44 iterations in hillclimb: 1.00001 0 17 20
+WARNING: already 41 iterations in hillclimb: 1.12272 2 18 33
+WARNING: already 42 iterations in hillclimb: 1.71465 2 58 33
+WARNING: already 43 iterations in hillclimb: 1.00001 0 58 33
+WARNING: already 41 iterations in hillclimb: 1.65152 2 33 13
+WARNING: already 42 iterations in hillclimb: 1.35232 2 75 27
+WARNING: already 43 iterations in hillclimb: 1.31108 2 63 16
+WARNING: already 44 iterations in hillclimb: 3.68395 2 68 16
+WARNING: already 45 iterations in hillclimb: 1.00001 0 68 16
+WARNING: already 41 iterations in hillclimb: 1.05207 2 68 25
+WARNING: already 42 iterations in hillclimb: 1.00001 0 68 25
+WARNING: already 41 iterations in hillclimb: 1.00001 0 49 29
+WARNING: already 41 iterations in hillclimb: 5.28923 2 35 27
+WARNING: already 42 iterations in hillclimb: 1.94397 2 18 21
+WARNING: already 43 iterations in hillclimb: 1.59132 2 9 6
+WARNING: already 44 iterations in hillclimb: 1.57383 2 41 27
+WARNING: already 45 iterations in hillclimb: 1.52224 2 34 6
+WARNING: already 46 iterations in hillclimb: 2.71897 2 40 26
+WARNING: already 47 iterations in hillclimb: 1.3691 2 25 22
+WARNING: already 48 iterations in hillclimb: 1.49062 2 39 38
+WARNING: already 49 iterations in hillclimb: 2.25154 2 1 10
+WARNING: already 50 iterations in hillclimb: 1.44265 2 8 6
+WARNING: already 51 iterations in hillclimb: 1.4971 2 10 6
+WARNING: already 52 iterations in hillclimb: 1.21654 2 49 12
+WARNING: already 53 iterations in hillclimb: 1.34237 2 53 12
+WARNING: already 54 iterations in hillclimb: 1.45268 2 62 12
+WARNING: already 55 iterations in hillclimb: 1.00001 0 62 12
+WARNING: already 41 iterations in hillclimb: 1.00001 0 21 0
+WARNING: already 41 iterations in hillclimb: 1.86914 2 65 58
+WARNING: already 42 iterations in hillclimb: 1.81243 2 27 21
+WARNING: already 43 iterations in hillclimb: 1.61709 2 32 14
+WARNING: already 44 iterations in hillclimb: 1.17364 2 58 55
+WARNING: already 45 iterations in hillclimb: 6.62647 2 45 23
+WARNING: already 46 iterations in hillclimb: 1.11529 2 63 47
+WARNING: already 47 iterations in hillclimb: 7.19805 2 76 47
+WARNING: already 48 iterations in hillclimb: 1.00001 0 76 47
+WARNING: already 41 iterations in hillclimb: 2.22216 2 45 1
+WARNING: already 42 iterations in hillclimb: 1.51275 2 63 59
+WARNING: already 43 iterations in hillclimb: 1.31477 2 69 59
+WARNING: already 44 iterations in hillclimb: 1.09647 2 51 59
+WARNING: already 45 iterations in hillclimb: 1.05066 2 71 52
+WARNING: already 46 iterations in hillclimb: 1.13706 2 56 52
+WARNING: already 47 iterations in hillclimb: 1.03881 2 54 59
+WARNING: already 48 iterations in hillclimb: 1.02383 2 45 44
+WARNING: already 49 iterations in hillclimb: 1.00001 0 45 44
+10000
+WARNING: already 41 iterations in hillclimb: 1.45127 2 40 15
+WARNING: already 42 iterations in hillclimb: 1.07775 2 71 29
+WARNING: already 43 iterations in hillclimb: 1.00001 0 71 29
+WARNING: already 41 iterations in hillclimb: 1.00001 0 68 0
+WARNING: already 41 iterations in hillclimb: 1.2314 2 24 14
+WARNING: already 42 iterations in hillclimb: 1.00001 0 24 14
+WARNING: already 41 iterations in hillclimb: 1.97424 1 25 70
+WARNING: already 42 iterations in hillclimb: 1.68796 2 25 42
+WARNING: already 43 iterations in hillclimb: 2.09798 2 67 42
+WARNING: already 44 iterations in hillclimb: 1.33089 2 51 42
+WARNING: already 45 iterations in hillclimb: 1.41653 2 37 42
+WARNING: already 46 iterations in hillclimb: 1.00001 0 37 42
+WARNING: already 41 iterations in hillclimb: 1.66162 2 48 28
+WARNING: already 42 iterations in hillclimb: 1.02977 2 19 27
+WARNING: already 43 iterations in hillclimb: 1.28803 2 24 27
+WARNING: already 44 iterations in hillclimb: 1.00001 0 24 27
+WARNING: already 41 iterations in hillclimb: 1.85973 2 2 46
+WARNING: already 42 iterations in hillclimb: 3.04573 2 1 2
+WARNING: already 43 iterations in hillclimb: 1.73453 2 55 43
+WARNING: already 44 iterations in hillclimb: 2.7465 2 65 43
+WARNING: already 45 iterations in hillclimb: 1.00001 0 65 43
+WARNING: already 41 iterations in hillclimb: 1.07195 2 60 44
+WARNING: already 42 iterations in hillclimb: 2.82433 2 42 22
+WARNING: already 43 iterations in hillclimb: 1.00001 0 42 22
+WARNING: already 41 iterations in hillclimb: 1.00001 0 7 45
+WARNING: already 41 iterations in hillclimb: 1.40219 2 62 29
+WARNING: already 42 iterations in hillclimb: 1.88925 2 45 26
+WARNING: already 43 iterations in hillclimb: 5.37715 2 71 26
+WARNING: already 44 iterations in hillclimb: 3.66788 2 29 26
+WARNING: already 45 iterations in hillclimb: 1.00001 0 29 26
+WARNING: already 41 iterations in hillclimb: 2.18318 2 67 5
+WARNING: already 42 iterations in hillclimb: 3.26668 2 46 5
+WARNING: already 43 iterations in hillclimb: 1.38447 2 56 5
+WARNING: already 44 iterations in hillclimb: 1.35372 2 39 26
+WARNING: already 45 iterations in hillclimb: 1.01471 2 34 0
+WARNING: already 46 iterations in hillclimb: 1.00001 0 34 0
+WARNING: already 41 iterations in hillclimb: 1.52436 2 2 7
+WARNING: already 42 iterations in hillclimb: 1.17922 2 42 47
+WARNING: already 43 iterations in hillclimb: 2.11339 2 53 24
+WARNING: already 44 iterations in hillclimb: 1.04191 2 72 6
+WARNING: already 45 iterations in hillclimb: 1.00001 0 72 6
+WARNING: already 41 iterations in hillclimb: 1.50865 2 74 4
+WARNING: already 42 iterations in hillclimb: 1.32521 2 23 6
+WARNING: already 43 iterations in hillclimb: 1.23085 2 71 42
+WARNING: already 44 iterations in hillclimb: 1.00001 0 71 42
+WARNING: already 41 iterations in hillclimb: 1.42158 2 24 51
+WARNING: already 42 iterations in hillclimb: 1.00001 0 24 51
+WARNING: already 41 iterations in hillclimb: 1.27764 2 51 0
+WARNING: already 42 iterations in hillclimb: 1.36801 2 30 1
+WARNING: already 43 iterations in hillclimb: 2.39056 2 6 2
+WARNING: already 44 iterations in hillclimb: 3.26591 2 3 2
+WARNING: already 45 iterations in hillclimb: 1.27472 1 26 39
+WARNING: already 46 iterations in hillclimb: 1.2454 2 30 2
+WARNING: already 47 iterations in hillclimb: 1.19733 1 56 62
+WARNING: already 48 iterations in hillclimb: 1.17684 2 32 39
+WARNING: already 49 iterations in hillclimb: 1.01722 1 10 26
+WARNING: already 50 iterations in hillclimb: 1.00001 0 10 26
+WARNING: already 41 iterations in hillclimb: 2.16067 2 34 42
+WARNING: already 42 iterations in hillclimb: 2.55521 2 76 42
+WARNING: already 43 iterations in hillclimb: 1.85383 2 17 42
+WARNING: already 44 iterations in hillclimb: 1.80896 2 61 0
+WARNING: already 45 iterations in hillclimb: 2.57172 2 21 42
+WARNING: already 46 iterations in hillclimb: 1.75447 1 23 51
+WARNING: already 47 iterations in hillclimb: 1.23136 2 45 17
+WARNING: already 48 iterations in hillclimb: 1.0327 2 31 24
+WARNING: already 49 iterations in hillclimb: 1.07689 2 26 9
+WARNING: already 50 iterations in hillclimb: 1.00001 0 26 9
+WARNING: already 41 iterations in hillclimb: 3.54133 2 5 20
+WARNING: already 42 iterations in hillclimb: 1.1666 2 65 47
+WARNING: already 43 iterations in hillclimb: 2.28823 2 66 47
+WARNING: already 44 iterations in hillclimb: 1.11988 2 72 53
+WARNING: already 45 iterations in hillclimb: 1.93804 1 72 80
+WARNING: already 46 iterations in hillclimb: 1.42347 2 8 1
+WARNING: already 47 iterations in hillclimb: 1.39742 2 23 53
+WARNING: already 48 iterations in hillclimb: 1.4559 2 31 53
+WARNING: already 49 iterations in hillclimb: 1.15107 2 8 53
+WARNING: already 50 iterations in hillclimb: 1.00001 0 8 53
+20000
+WARNING: already 41 iterations in hillclimb: 1.72264 2 71 11
+WARNING: already 42 iterations in hillclimb: 1.25501 2 11 0
+WARNING: already 43 iterations in hillclimb: 1.025 2 43 11
+WARNING: already 44 iterations in hillclimb: 1.56853 2 66 12
+WARNING: already 45 iterations in hillclimb: 1.00001 0 66 12
+WARNING: already 41 iterations in hillclimb: 1.20244 2 63 27
+WARNING: already 42 iterations in hillclimb: 1.00001 0 63 27
+WARNING: already 41 iterations in hillclimb: 1.19221 2 33 9
+WARNING: already 42 iterations in hillclimb: 1.00001 0 33 9
+WARNING: already 41 iterations in hillclimb: 1.35185 2 32 15
+WARNING: already 42 iterations in hillclimb: 1.06632 1 30 32
+WARNING: already 43 iterations in hillclimb: 1.00001 0 30 32
+WARNING: already 41 iterations in hillclimb: 1.00001 0 38 22
+WARNING: already 41 iterations in hillclimb: 1.179 2 16 17
+WARNING: already 42 iterations in hillclimb: 1.50289 2 3 0
+WARNING: already 43 iterations in hillclimb: 1.00001 0 3 0
+WARNING: already 41 iterations in hillclimb: 1.05315 2 57 36
+WARNING: already 42 iterations in hillclimb: 2.8686 2 9 23
+WARNING: already 43 iterations in hillclimb: 2.68937 2 39 36
+WARNING: already 44 iterations in hillclimb: 1.00001 0 39 36
+WARNING: already 41 iterations in hillclimb: 1.00001 0 62 33
+WARNING: already 41 iterations in hillclimb: 1.33025 2 53 42
+WARNING: already 42 iterations in hillclimb: 1.00001 0 53 42
+WARNING: already 41 iterations in hillclimb: 2.09376 2 51 51
+WARNING: already 42 iterations in hillclimb: 1.30267 2 25 7
+WARNING: already 43 iterations in hillclimb: 1.13863 2 42 37
+WARNING: already 44 iterations in hillclimb: 1.4191 2 46 37
+WARNING: already 45 iterations in hillclimb: 1.00576 2 78 15
+WARNING: already 46 iterations in hillclimb: 1.0732 2 6 6
+WARNING: already 47 iterations in hillclimb: 1.00001 0 6 6
+WARNING: already 41 iterations in hillclimb: 1.47511 2 14 21
+WARNING: already 42 iterations in hillclimb: 1.00001 0 14 21
+WARNING: already 41 iterations in hillclimb: 1.00491 2 45 0
+WARNING: already 42 iterations in hillclimb: 1.00001 0 45 0
+WARNING: already 41 iterations in hillclimb: 1.00001 0 35 22
+30000
+WARNING: already 41 iterations in hillclimb: 1.1008 2 17 19
+WARNING: already 42 iterations in hillclimb: 1.00001 0 17 19
+WARNING: already 41 iterations in hillclimb: 1.12176 2 45 42
+WARNING: already 42 iterations in hillclimb: 1.06783 2 25 21
+WARNING: already 43 iterations in hillclimb: 1.00994 2 9 42
+WARNING: already 44 iterations in hillclimb: 1.00114 2 65 26
+WARNING: already 45 iterations in hillclimb: 1.47327 2 63 26
+WARNING: already 46 iterations in hillclimb: 1.00001 0 63 26
+WARNING: already 41 iterations in hillclimb: 1.00001 0 67 50
+WARNING: already 41 iterations in hillclimb: 1.37337 2 47 23
+WARNING: already 42 iterations in hillclimb: 1.2486 2 15 14
+WARNING: already 43 iterations in hillclimb: 2.66148 2 21 14
+WARNING: already 44 iterations in hillclimb: 1.64714 2 45 14
+WARNING: already 45 iterations in hillclimb: 1.29004 2 11 23
+WARNING: already 46 iterations in hillclimb: 1.00001 0 11 23
+WARNING: already 41 iterations in hillclimb: 1.15129 2 40 24
+WARNING: already 42 iterations in hillclimb: 2.30451 2 12 42
+WARNING: already 43 iterations in hillclimb: 1.79486 2 79 42
+WARNING: already 44 iterations in hillclimb: 1.05478 2 21 21
+WARNING: already 45 iterations in hillclimb: 1.00001 0 21 21
+WARNING: already 41 iterations in hillclimb: 1.08697 2 45 14
+WARNING: already 42 iterations in hillclimb: 1.00001 0 45 14
+WARNING: already 41 iterations in hillclimb: 1.00001 0 33 47
+WARNING: already 41 iterations in hillclimb: 1.1749 2 70 24
+WARNING: already 42 iterations in hillclimb: 1.11747 2 23 16
+WARNING: already 43 iterations in hillclimb: 1.35481 2 73 4
+WARNING: already 44 iterations in hillclimb: 1.0416 2 51 35
+WARNING: already 45 iterations in hillclimb: 1.2784 2 40 35
+WARNING: already 46 iterations in hillclimb: 2.51621 2 65 35
+WARNING: already 47 iterations in hillclimb: 3.54531 2 55 35
+WARNING: already 48 iterations in hillclimb: 1.50422 2 53 35
+WARNING: already 49 iterations in hillclimb: 9.80562 2 59 35
+WARNING: already 50 iterations in hillclimb: 3.46632 2 46 35
+WARNING: already 51 iterations in hillclimb: 1.83369 2 70 21
+WARNING: already 52 iterations in hillclimb: 1.59354 2 48 35
+WARNING: already 53 iterations in hillclimb: 2.04025 2 39 35
+WARNING: already 54 iterations in hillclimb: 1.11337 2 54 29
+WARNING: already 55 iterations in hillclimb: 4.81949 2 50 29
+WARNING: already 56 iterations in hillclimb: 1.46548 2 56 29
+WARNING: already 57 iterations in hillclimb: 1.46443 2 55 29
+WARNING: already 58 iterations in hillclimb: 1.84681 2 39 0
+WARNING: already 59 iterations in hillclimb: 1.00001 0 39 0
+WARNING: already 41 iterations in hillclimb: 1.2882 2 71 39
+WARNING: already 42 iterations in hillclimb: 1.04333 2 58 52
+WARNING: already 43 iterations in hillclimb: 1.02196 1 15 76
+WARNING: already 44 iterations in hillclimb: 1.00001 0 15 76
+WARNING: already 41 iterations in hillclimb: 1.19504 2 63 12
+WARNING: already 42 iterations in hillclimb: 1.80052 2 62 44
+WARNING: already 43 iterations in hillclimb: 1.08006 2 59 37
+WARNING: already 44 iterations in hillclimb: 1.67956 2 75 19
+WARNING: already 45 iterations in hillclimb: 2.88937 2 29 19
+WARNING: already 46 iterations in hillclimb: 1.52406 2 66 19
+WARNING: already 47 iterations in hillclimb: 1.66719 2 71 19
+WARNING: already 48 iterations in hillclimb: 2.48162 2 48 37
+WARNING: already 49 iterations in hillclimb: 1.00001 0 48 37
+WARNING: already 41 iterations in hillclimb: 1.12284 2 8 0
+WARNING: already 42 iterations in hillclimb: 1.00001 0 8 0
+WARNING: already 41 iterations in hillclimb: 1.00001 0 4 19
+WARNING: already 41 iterations in hillclimb: 1.00001 0 21 32
+40000
+WARNING: already 41 iterations in hillclimb: 1.81161 2 38 33
+WARNING: already 42 iterations in hillclimb: 15.5886 2 57 33
+WARNING: already 43 iterations in hillclimb: 1.06427 2 24 3
+WARNING: already 44 iterations in hillclimb: 1.06353 2 39 39
+WARNING: already 45 iterations in hillclimb: 1.05081 2 23 17
+WARNING: already 46 iterations in hillclimb: 3.7528 2 24 17
+WARNING: already 47 iterations in hillclimb: 1.40187 2 12 17
+WARNING: already 48 iterations in hillclimb: 1.3892 2 30 17
+WARNING: already 49 iterations in hillclimb: 1.11407 2 35 26
+WARNING: already 50 iterations in hillclimb: 3.27667 2 54 26
+WARNING: already 51 iterations in hillclimb: 1.00001 0 54 26
+WARNING: already 41 iterations in hillclimb: 1.05085 2 28 13
+WARNING: already 42 iterations in hillclimb: 1.02767 1 43 55
+WARNING: already 43 iterations in hillclimb: 1.0162 2 26 5
+WARNING: already 44 iterations in hillclimb: 1.00001 0 26 5
+WARNING: already 41 iterations in hillclimb: 1.87223 2 48 19
+WARNING: already 42 iterations in hillclimb: 1.19559 2 69 36
+WARNING: already 43 iterations in hillclimb: 1.05613 2 46 19
+WARNING: already 44 iterations in hillclimb: 1.00001 0 46 19
+WARNING: already 41 iterations in hillclimb: 1.00001 0 67 51
+WARNING: already 41 iterations in hillclimb: 1.00001 0 75 42
+WARNING: already 41 iterations in hillclimb: 1.05208 2 57 44
+WARNING: already 42 iterations in hillclimb: 1.00001 0 57 44
+WARNING: already 41 iterations in hillclimb: 1.00001 0 4 14
+WARNING: already 41 iterations in hillclimb: 1.53347 2 40 37
+WARNING: already 42 iterations in hillclimb: 1.00001 0 40 37
+WARNING: already 41 iterations in hillclimb: 6.26852 2 77 1
+WARNING: already 42 iterations in hillclimb: 1.85728 2 29 0
+WARNING: already 43 iterations in hillclimb: 1.42721 1 29 70
+WARNING: already 44 iterations in hillclimb: 1.53932 2 70 8
+WARNING: already 45 iterations in hillclimb: 1.10749 2 47 4
+WARNING: already 46 iterations in hillclimb: 1.08811 2 34 1
+WARNING: already 47 iterations in hillclimb: 1.053 2 3 1
+WARNING: already 48 iterations in hillclimb: 1.04158 2 75 1
+WARNING: already 49 iterations in hillclimb: 1.00001 0 75 1
+WARNING: already 41 iterations in hillclimb: 1.07234 2 26 22
+WARNING: already 42 iterations in hillclimb: 1.00001 0 26 22
+WARNING: already 41 iterations in hillclimb: 1.08591 2 46 4
+WARNING: already 42 iterations in hillclimb: 1.08361 2 23 18
+WARNING: already 43 iterations in hillclimb: 1.00001 0 23 18
+WARNING: already 41 iterations in hillclimb: 1.00001 0 16 15
+WARNING: already 41 iterations in hillclimb: 1.3445 2 21 17
+WARNING: already 42 iterations in hillclimb: 1.00001 0 21 17
+WARNING: already 41 iterations in hillclimb: 1.72932 2 65 29
+WARNING: already 42 iterations in hillclimb: 1.27721 1 17 18
+WARNING: already 43 iterations in hillclimb: 3.05562 2 18 6
+WARNING: already 44 iterations in hillclimb: 1.08841 2 73 36
+WARNING: already 45 iterations in hillclimb: 4.99136 2 45 36
+WARNING: already 46 iterations in hillclimb: 1.06885 1 50 66
+WARNING: already 47 iterations in hillclimb: 1.00001 0 50 66
+WARNING: already 41 iterations in hillclimb: 2.32358 2 41 33
+WARNING: already 42 iterations in hillclimb: 1.44286 2 42 33
+WARNING: already 43 iterations in hillclimb: 1.6909 2 53 32
+WARNING: already 44 iterations in hillclimb: 1.14565 2 68 53
+WARNING: already 45 iterations in hillclimb: 1.00001 0 68 53
+WARNING: already 41 iterations in hillclimb: 1.02958 2 24 0
+WARNING: already 42 iterations in hillclimb: 1.23121 1 24 77
+WARNING: already 43 iterations in hillclimb: 2.63212 2 77 10
+WARNING: already 44 iterations in hillclimb: 1.00001 0 77 10
+WARNING: already 41 iterations in hillclimb: 2.82593 2 18 23
+WARNING: already 42 iterations in hillclimb: 1.31334 2 43 47
+WARNING: already 43 iterations in hillclimb: 1.00001 0 43 47
+WARNING: already 41 iterations in hillclimb: 4.91805 2 76 34
+WARNING: already 42 iterations in hillclimb: 6.15489 2 45 34
+WARNING: already 43 iterations in hillclimb: 10.0604 2 56 34
+WARNING: already 44 iterations in hillclimb: 2.01402 1 11 80
+WARNING: already 45 iterations in hillclimb: 1.66531 2 39 22
+WARNING: already 46 iterations in hillclimb: 1.63951 2 26 7
+WARNING: already 47 iterations in hillclimb: 1.60714 2 35 33
+WARNING: already 48 iterations in hillclimb: 1.47719 2 65 20
+WARNING: already 49 iterations in hillclimb: 3.05995 2 19 20
+WARNING: already 50 iterations in hillclimb: 2.23729 2 69 20
+WARNING: already 51 iterations in hillclimb: 2.15421 2 48 33
+WARNING: already 52 iterations in hillclimb: 1.45423 2 5 7
+WARNING: already 53 iterations in hillclimb: 1.24205 2 72 34
+WARNING: already 54 iterations in hillclimb: 3.96378 2 53 34
+WARNING: already 55 iterations in hillclimb: 1.00001 0 53 34
+50000
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 1.60763 1 17 36
+WARNING: already 42 iterations in hillclimb: 1.45784 2 71 2
+WARNING: already 43 iterations in hillclimb: 1.42312 1 12 33
+WARNING: already 44 iterations in hillclimb: 1.21131 2 47 42
+WARNING: already 45 iterations in hillclimb: 4.43065 2 46 42
+WARNING: already 46 iterations in hillclimb: 2.09548 2 45 42
+WARNING: already 47 iterations in hillclimb: 1.32475 2 43 42
+WARNING: already 48 iterations in hillclimb: 1.19843 2 73 42
+WARNING: already 49 iterations in hillclimb: 1.18442 2 67 56
+WARNING: already 50 iterations in hillclimb: 1.14788 2 78 42
+WARNING: already 51 iterations in hillclimb: 1.86961 2 50 11
+WARNING: already 52 iterations in hillclimb: 1.00924 2 39 7
+WARNING: already 53 iterations in hillclimb: 1.40302 1 1 39
+WARNING: already 54 iterations in hillclimb: 1.00001 0 1 39
+WARNING: already 41 iterations in hillclimb: 1.01718 2 19 16
+WARNING: already 42 iterations in hillclimb: 5.82387 2 18 16
+WARNING: already 43 iterations in hillclimb: 1.00001 0 18 16
+WARNING: already 41 iterations in hillclimb: 1.08477 2 61 0
+WARNING: already 42 iterations in hillclimb: 1.00001 0 61 0
+WARNING: already 41 iterations in hillclimb: 8.29776 2 13 3
+WARNING: already 42 iterations in hillclimb: 1.54443 2 18 56
+WARNING: already 43 iterations in hillclimb: 58.9052 2 33 56
+WARNING: already 44 iterations in hillclimb: 59.3453 2 47 56
+WARNING: already 45 iterations in hillclimb: 2.10946 2 37 55
+WARNING: already 46 iterations in hillclimb: 1.49066 2 41 28
+WARNING: already 47 iterations in hillclimb: 5.62847 2 64 52
+WARNING: already 48 iterations in hillclimb: 1.25674 2 59 55
+WARNING: already 49 iterations in hillclimb: 1.20199 2 39 28
+WARNING: already 50 iterations in hillclimb: 1.00001 0 39 28
+WARNING: already 41 iterations in hillclimb: 1.05778 2 28 9
+WARNING: already 42 iterations in hillclimb: 1.22975 2 36 9
+WARNING: already 43 iterations in hillclimb: 3.57759 2 64 20
+WARNING: already 44 iterations in hillclimb: 1.36731 2 51 0
+WARNING: already 45 iterations in hillclimb: 1.25272 2 42 9
+WARNING: already 46 iterations in hillclimb: 1.33723 2 41 9
+WARNING: already 47 iterations in hillclimb: 1.34709 2 72 9
+WARNING: already 48 iterations in hillclimb: 1.60444 2 21 11
+WARNING: already 49 iterations in hillclimb: 1.1953 2 22 15
+WARNING: already 50 iterations in hillclimb: 1.78173 2 23 15
+WARNING: already 51 iterations in hillclimb: 1.07163 2 33 9
+WARNING: already 52 iterations in hillclimb: 1.00001 0 33 9
+WARNING: already 41 iterations in hillclimb: 14.2779 2 71 53
+WARNING: already 42 iterations in hillclimb: 1.60188 2 40 19
+WARNING: already 43 iterations in hillclimb: 1.00001 0 40 19
+WARNING: already 41 iterations in hillclimb: 1.00001 0 33 31
+WARNING: already 41 iterations in hillclimb: 1.14858 2 53 30
+WARNING: already 42 iterations in hillclimb: 1.00001 0 53 30
+WARNING: already 41 iterations in hillclimb: 8.85774 2 10 52
+WARNING: already 42 iterations in hillclimb: 4.14871 2 18 16
+WARNING: already 43 iterations in hillclimb: 1.08414 2 47 47
+WARNING: already 44 iterations in hillclimb: 1.19882 2 44 47
+WARNING: already 45 iterations in hillclimb: 1.00001 0 44 47
+WARNING: already 41 iterations in hillclimb: 1.00001 0 75 32
+WARNING: already 41 iterations in hillclimb: 1.00001 0 62 15
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1386.2 #alsophisticatedcountcollection: 0 #hcsteps: 10.8205
+#peggingImprovements: 0
+A/D table contains 251783 parameters.
+A/D table contains 195314 parameters.
+NTable contains 257650 parameter.
+p0_count is 1.60308e+06 and p1 is 70705.4; p0 is 0.999 p1: 0.001
+Model3: TRAIN CROSS-ENTROPY 8.28963 PERPLEXITY 312.915
+Model3: (2) TRAIN VITERBI CROSS-ENTROPY 8.40374 PERPLEXITY 338.67
+
+Model3 Viterbi Iteration : 2 took: 46 seconds
+
+---------------------
+Model3: Iteration 3
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 1.10764 2 22 22
+WARNING: already 42 iterations in hillclimb: 1.49423 2 46 45
+WARNING: already 43 iterations in hillclimb: 1.3881 2 67 45
+WARNING: already 44 iterations in hillclimb: 2.60982 2 65 45
+WARNING: already 45 iterations in hillclimb: 1.78575 2 24 21
+WARNING: already 46 iterations in hillclimb: 75.3318 2 42 21
+WARNING: already 47 iterations in hillclimb: 1.00001 0 42 21
+WARNING: already 41 iterations in hillclimb: 1.36484 2 77 37
+WARNING: already 42 iterations in hillclimb: 10.9607 2 66 37
+WARNING: already 43 iterations in hillclimb: 1.29213 2 50 37
+WARNING: already 44 iterations in hillclimb: 1.2336 2 7 9
+WARNING: already 45 iterations in hillclimb: 1.549 2 36 9
+WARNING: already 46 iterations in hillclimb: 2.61674 2 70 9
+WARNING: already 47 iterations in hillclimb: 1.995 2 38 0
+WARNING: already 48 iterations in hillclimb: 1.32838 2 56 15
+WARNING: already 49 iterations in hillclimb: 1.18295 1 13 23
+WARNING: already 50 iterations in hillclimb: 1.00001 0 13 23
+WARNING: already 41 iterations in hillclimb: 70.0717 2 39 24
+WARNING: already 42 iterations in hillclimb: 1.19267 2 30 14
+WARNING: already 43 iterations in hillclimb: 1.00001 0 30 14
+WARNING: already 41 iterations in hillclimb: 4.66221 2 25 15
+WARNING: already 42 iterations in hillclimb: 1.06197 2 71 31
+WARNING: already 43 iterations in hillclimb: 1.00001 0 71 31
+WARNING: already 41 iterations in hillclimb: 1.18474 2 28 49
+WARNING: already 42 iterations in hillclimb: 1.00001 0 28 49
+WARNING: already 41 iterations in hillclimb: 2.21209 2 32 36
+WARNING: already 42 iterations in hillclimb: 1.00001 0 32 36
+10000
+WARNING: already 41 iterations in hillclimb: 1.66504 2 72 31
+WARNING: already 42 iterations in hillclimb: 1.18851 2 21 30
+WARNING: already 43 iterations in hillclimb: 1.00001 0 21 30
+WARNING: already 41 iterations in hillclimb: 8.81701 2 1 2
+WARNING: already 42 iterations in hillclimb: 1.00001 0 1 2
+WARNING: already 41 iterations in hillclimb: 1.83652 2 44 57
+WARNING: already 42 iterations in hillclimb: 2.98424 2 69 57
+WARNING: already 43 iterations in hillclimb: 1.63167 2 6 7
+WARNING: already 44 iterations in hillclimb: 1.07167 2 31 19
+WARNING: already 45 iterations in hillclimb: 1.04625 2 62 56
+WARNING: already 46 iterations in hillclimb: 1.00228 2 66 60
+WARNING: already 47 iterations in hillclimb: 1.00001 0 66 60
+WARNING: already 41 iterations in hillclimb: 2.83095 2 68 6
+WARNING: already 42 iterations in hillclimb: 2.47095 2 70 4
+WARNING: already 43 iterations in hillclimb: 1.00001 0 70 4
+WARNING: already 41 iterations in hillclimb: 13.1595 2 5 4
+WARNING: already 42 iterations in hillclimb: 1.13925 2 46 49
+WARNING: already 43 iterations in hillclimb: 3.26365 2 75 49
+WARNING: already 44 iterations in hillclimb: 5.06484 2 38 49
+WARNING: already 45 iterations in hillclimb: 1.72475 2 70 48
+WARNING: already 46 iterations in hillclimb: 1.55024 2 73 48
+WARNING: already 47 iterations in hillclimb: 1.01873 2 24 32
+WARNING: already 48 iterations in hillclimb: 4.44883 2 23 6
+WARNING: already 49 iterations in hillclimb: 1.00001 0 23 6
+WARNING: already 41 iterations in hillclimb: 1.00001 0 58 76
+WARNING: already 41 iterations in hillclimb: 1.06649 2 61 39
+WARNING: already 42 iterations in hillclimb: 1.0435 2 30 1
+WARNING: already 43 iterations in hillclimb: 1.33418 2 52 23
+WARNING: already 44 iterations in hillclimb: 1.2729 2 28 25
+WARNING: already 45 iterations in hillclimb: 12.6202 2 16 23
+WARNING: already 46 iterations in hillclimb: 1.97394 2 48 25
+WARNING: already 47 iterations in hillclimb: 5.46678 2 25 25
+WARNING: already 48 iterations in hillclimb: 5.83159 2 51 0
+WARNING: already 49 iterations in hillclimb: 1.00001 0 51 0
+WARNING: already 41 iterations in hillclimb: 1.03794 2 33 2
+WARNING: already 42 iterations in hillclimb: 1.00001 0 33 2
+WARNING: already 41 iterations in hillclimb: 1.00001 0 8 63
+20000
+WARNING: already 41 iterations in hillclimb: 1.22958 1 15 24
+WARNING: already 42 iterations in hillclimb: 1.15609 2 13 23
+WARNING: already 43 iterations in hillclimb: 1.07085 2 28 18
+WARNING: already 44 iterations in hillclimb: 1.00001 0 28 18
+WARNING: already 41 iterations in hillclimb: 3.43017 1 66 71
+WARNING: already 42 iterations in hillclimb: 1.5357 2 19 17
+WARNING: already 43 iterations in hillclimb: 1.00001 0 19 17
+WARNING: already 41 iterations in hillclimb: 1.52458 2 15 13
+WARNING: already 42 iterations in hillclimb: 4.46706 2 5 13
+WARNING: already 43 iterations in hillclimb: 3.59346 2 19 13
+WARNING: already 44 iterations in hillclimb: 1.56067 2 60 39
+WARNING: already 45 iterations in hillclimb: 1.20444 1 31 48
+WARNING: already 46 iterations in hillclimb: 1.00001 0 31 48
+WARNING: already 41 iterations in hillclimb: 1.7798 2 71 17
+WARNING: already 42 iterations in hillclimb: 1.21932 2 12 17
+WARNING: already 43 iterations in hillclimb: 1.15087 2 68 51
+WARNING: already 44 iterations in hillclimb: 1.97503 2 73 51
+WARNING: already 45 iterations in hillclimb: 1.00001 0 73 51
+WARNING: already 41 iterations in hillclimb: 1.00001 0 8 8
+WARNING: already 41 iterations in hillclimb: 1.00001 0 16 12
+WARNING: already 41 iterations in hillclimb: 1.22933 2 39 20
+WARNING: already 42 iterations in hillclimb: 1.1855 2 13 8
+WARNING: already 43 iterations in hillclimb: 174.732 2 12 8
+WARNING: already 44 iterations in hillclimb: 1.0384 2 9 0
+WARNING: already 45 iterations in hillclimb: 1.14771 2 20 9
+WARNING: already 46 iterations in hillclimb: 1.00001 0 20 9
+WARNING: already 41 iterations in hillclimb: 1.73062 2 27 27
+WARNING: already 42 iterations in hillclimb: 16.8195 2 19 25
+WARNING: already 43 iterations in hillclimb: 2.41019 2 47 46
+WARNING: already 44 iterations in hillclimb: 1.00001 0 47 46
+30000
+WARNING: already 41 iterations in hillclimb: 1.00001 0 36 33
+WARNING: already 41 iterations in hillclimb: 2.23404 2 45 23
+WARNING: already 42 iterations in hillclimb: 1.2434 2 29 13
+WARNING: already 43 iterations in hillclimb: 1.00001 0 29 13
+WARNING: already 41 iterations in hillclimb: 1.03963 2 50 30
+WARNING: already 42 iterations in hillclimb: 1.00001 0 50 30
+WARNING: already 41 iterations in hillclimb: 1.07573 2 22 27
+WARNING: already 42 iterations in hillclimb: 1.07755 2 51 35
+WARNING: already 43 iterations in hillclimb: 22.6893 2 59 35
+WARNING: already 44 iterations in hillclimb: 4.53209 2 65 35
+WARNING: already 45 iterations in hillclimb: 1.00001 0 65 35
+WARNING: already 41 iterations in hillclimb: 1.28609 2 71 39
+WARNING: already 42 iterations in hillclimb: 1.24541 1 7 20
+WARNING: already 43 iterations in hillclimb: 1.00001 0 7 20
+WARNING: already 41 iterations in hillclimb: 1.00001 0 25 18
+WARNING: already 41 iterations in hillclimb: 5.72366 2 74 20
+WARNING: already 42 iterations in hillclimb: 1.18198 2 15 18
+WARNING: already 43 iterations in hillclimb: 1.30491 2 5 13
+WARNING: already 44 iterations in hillclimb: 1.00001 0 5 13
+WARNING: already 41 iterations in hillclimb: 1.46179 2 42 39
+WARNING: already 42 iterations in hillclimb: 1.00001 0 42 39
+WARNING: already 41 iterations in hillclimb: 4.73645 2 43 29
+WARNING: already 42 iterations in hillclimb: 1.00001 0 43 29
+WARNING: already 41 iterations in hillclimb: 1.42867 2 61 19
+WARNING: already 42 iterations in hillclimb: 1.00001 0 61 19
+40000
+WARNING: already 41 iterations in hillclimb: 1.12135 2 26 35
+WARNING: already 42 iterations in hillclimb: 1.00001 0 26 35
+WARNING: already 41 iterations in hillclimb: 2.49636 2 25 26
+WARNING: already 42 iterations in hillclimb: 1.26039 2 22 21
+WARNING: already 43 iterations in hillclimb: 1.17911 2 51 40
+WARNING: already 44 iterations in hillclimb: 1.06967 1 17 64
+WARNING: already 45 iterations in hillclimb: 1.00001 0 17 64
+WARNING: already 41 iterations in hillclimb: 1.00001 0 17 47
+WARNING: already 41 iterations in hillclimb: 1.29142 2 28 31
+WARNING: already 42 iterations in hillclimb: 1.05942 2 44 29
+WARNING: already 43 iterations in hillclimb: 1.22052 2 33 0
+WARNING: already 44 iterations in hillclimb: 1.00001 0 33 0
+WARNING: already 41 iterations in hillclimb: 1.06889 2 15 0
+WARNING: already 42 iterations in hillclimb: 1.00001 0 15 0
+WARNING: already 41 iterations in hillclimb: 5.49585 2 39 25
+WARNING: already 42 iterations in hillclimb: 1.08232 2 76 46
+WARNING: already 43 iterations in hillclimb: 1.00001 0 76 46
+WARNING: already 41 iterations in hillclimb: 15.4489 2 32 27
+WARNING: already 42 iterations in hillclimb: 20.4764 2 8 3
+WARNING: already 43 iterations in hillclimb: 1.00001 0 8 3
+WARNING: already 41 iterations in hillclimb: 1.32631 2 27 21
+WARNING: already 42 iterations in hillclimb: 4.96862 2 65 21
+WARNING: already 43 iterations in hillclimb: 4.29451 2 51 21
+WARNING: already 44 iterations in hillclimb: 1.00001 0 51 21
+WARNING: already 41 iterations in hillclimb: 1.59945 2 13 4
+WARNING: already 42 iterations in hillclimb: 1.00001 0 13 4
+WARNING: already 41 iterations in hillclimb: 1.00001 0 62 63
+WARNING: already 41 iterations in hillclimb: 3.82092 2 39 31
+WARNING: already 42 iterations in hillclimb: 1.41733 2 38 31
+WARNING: already 43 iterations in hillclimb: 3.03298 2 31 31
+WARNING: already 44 iterations in hillclimb: 2.07508 2 67 31
+WARNING: already 45 iterations in hillclimb: 12.0696 2 68 31
+WARNING: already 46 iterations in hillclimb: 4.20824 2 27 31
+WARNING: already 47 iterations in hillclimb: 20.9271 2 24 23
+WARNING: already 48 iterations in hillclimb: 2.00254 2 34 31
+WARNING: already 49 iterations in hillclimb: 1.71151 2 19 27
+WARNING: already 50 iterations in hillclimb: 1.10826 2 45 36
+WARNING: already 51 iterations in hillclimb: 1.00001 0 45 36
+WARNING: already 41 iterations in hillclimb: 2.55707 2 58 32
+WARNING: already 42 iterations in hillclimb: 1.52236 2 63 29
+WARNING: already 43 iterations in hillclimb: 4.15088 2 71 29
+WARNING: already 44 iterations in hillclimb: 1.03288 2 26 21
+WARNING: already 45 iterations in hillclimb: 1.00001 0 26 21
+50000
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 3.70231 2 79 1
+WARNING: already 42 iterations in hillclimb: 3.35138 1 22 34
+WARNING: already 43 iterations in hillclimb: 3.06241 2 42 15
+WARNING: already 44 iterations in hillclimb: 2.0018 1 1 39
+WARNING: already 45 iterations in hillclimb: 1.89801 1 54 67
+WARNING: already 46 iterations in hillclimb: 1.76577 2 2 22
+WARNING: already 47 iterations in hillclimb: 1.72653 1 45 71
+WARNING: already 48 iterations in hillclimb: 1.35823 2 78 1
+WARNING: already 49 iterations in hillclimb: 1.30803 2 76 22
+WARNING: already 50 iterations in hillclimb: 1.1119 2 27 17
+WARNING: already 51 iterations in hillclimb: 1.05317 2 10 3
+WARNING: already 52 iterations in hillclimb: 2.86042 2 2 3
+WARNING: already 53 iterations in hillclimb: 3.87762 2 11 3
+WARNING: already 54 iterations in hillclimb: 2.17814 2 26 3
+WARNING: already 55 iterations in hillclimb: 1.39371 2 38 59
+WARNING: already 56 iterations in hillclimb: 1.39293 2 49 59
+WARNING: already 57 iterations in hillclimb: 4.11547 2 80 59
+WARNING: already 58 iterations in hillclimb: 1.04551 2 5 11
+WARNING: already 59 iterations in hillclimb: 1.00001 0 5 11
+WARNING: already 41 iterations in hillclimb: 1.00001 0 25 19
+WARNING: already 41 iterations in hillclimb: 3.41232 2 49 56
+WARNING: already 42 iterations in hillclimb: 3.83676 2 21 56
+WARNING: already 43 iterations in hillclimb: 1.12122 2 12 10
+WARNING: already 44 iterations in hillclimb: 1.00001 0 12 10
+WARNING: already 41 iterations in hillclimb: 4.32207 2 23 16
+WARNING: already 42 iterations in hillclimb: 6.55649 2 9 16
+WARNING: already 43 iterations in hillclimb: 1.01323 2 20 26
+WARNING: already 44 iterations in hillclimb: 2.85017 2 16 46
+WARNING: already 45 iterations in hillclimb: 1.43195 2 52 36
+WARNING: already 46 iterations in hillclimb: 1.00001 0 52 36
+WARNING: already 41 iterations in hillclimb: 5.4862 2 12 21
+WARNING: already 42 iterations in hillclimb: 2.03609 2 55 42
+WARNING: already 43 iterations in hillclimb: 8.90305 2 13 42
+WARNING: already 44 iterations in hillclimb: 1.90784 2 27 16
+WARNING: already 45 iterations in hillclimb: 1.20811 2 69 42
+WARNING: already 46 iterations in hillclimb: 33.5699 2 65 42
+WARNING: already 47 iterations in hillclimb: 1.00001 0 65 42
+WARNING: already 41 iterations in hillclimb: 2.92541 2 71 53
+WARNING: already 42 iterations in hillclimb: 23.9237 2 12 26
+WARNING: already 43 iterations in hillclimb: 1.01193 2 56 34
+WARNING: already 44 iterations in hillclimb: 4.20243 2 53 34
+WARNING: already 45 iterations in hillclimb: 1.2597 2 33 16
+WARNING: already 46 iterations in hillclimb: 1.76363 2 50 16
+WARNING: already 47 iterations in hillclimb: 1.00001 0 50 16
+WARNING: already 41 iterations in hillclimb: 1.04116 1 34 53
+WARNING: already 42 iterations in hillclimb: 4.53992 1 34 39
+WARNING: already 43 iterations in hillclimb: 126.088 2 34 9
+WARNING: already 44 iterations in hillclimb: 1.00001 0 34 9
+WARNING: already 41 iterations in hillclimb: 1.49394 2 73 14
+WARNING: already 42 iterations in hillclimb: 1.48138 2 17 26
+WARNING: already 43 iterations in hillclimb: 1.60411 2 6 26
+WARNING: already 44 iterations in hillclimb: 1.00001 0 6 26
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1386.13 #alsophisticatedcountcollection: 0 #hcsteps: 9.10633
+#peggingImprovements: 0
+A/D table contains 251783 parameters.
+A/D table contains 195238 parameters.
+NTable contains 257650 parameter.
+p0_count is 1.62233e+06 and p1 is 61077.1; p0 is 0.999 p1: 0.001
+Model3: TRAIN CROSS-ENTROPY 8.10224 PERPLEXITY 274.8
+Model3: (3) TRAIN VITERBI CROSS-ENTROPY 8.19806 PERPLEXITY 293.671
+
+Model3 Viterbi Iteration : 3 took: 44 seconds
+
+---------------------
+T3To4: Iteration 4
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 6.44575 2 48 43
+WARNING: already 42 iterations in hillclimb: 1.00001 0 48 43
+WARNING: already 41 iterations in hillclimb: 1.24504 2 12 33
+WARNING: already 42 iterations in hillclimb: 1.66184 2 30 14
+WARNING: already 43 iterations in hillclimb: 1.08935 2 68 38
+WARNING: already 44 iterations in hillclimb: 1.00306 1 37 68
+WARNING: already 45 iterations in hillclimb: 1.00333 1 36 68
+WARNING: already 46 iterations in hillclimb: 1.00001 0 36 68
+WARNING: already 41 iterations in hillclimb: 1.00676 2 60 37
+WARNING: already 42 iterations in hillclimb: 2.35201 2 69 59
+WARNING: already 43 iterations in hillclimb: 2.30178 2 74 59
+WARNING: already 44 iterations in hillclimb: 1.17756 2 15 21
+WARNING: already 45 iterations in hillclimb: 1.00001 0 15 21
+10000
+WARNING: already 41 iterations in hillclimb: 1.00001 0 64 4
+WARNING: already 41 iterations in hillclimb: 1.03439 1 32 61
+WARNING: already 42 iterations in hillclimb: 1.01861 2 21 12
+WARNING: already 43 iterations in hillclimb: 1.00001 0 21 12
+WARNING: already 41 iterations in hillclimb: 1.02016 1 31 44
+WARNING: already 42 iterations in hillclimb: 1.00001 0 31 44
+20000
+30000
+WARNING: already 41 iterations in hillclimb: 3.38939 2 22 0
+WARNING: already 42 iterations in hillclimb: 3.71861 1 9 22
+WARNING: already 43 iterations in hillclimb: 1.00001 0 9 22
+WARNING: already 41 iterations in hillclimb: 6.86844 2 35 23
+WARNING: already 42 iterations in hillclimb: 1.46142 2 13 0
+WARNING: already 43 iterations in hillclimb: 1.25144 2 31 23
+WARNING: already 44 iterations in hillclimb: 1.08978 2 32 9
+WARNING: already 45 iterations in hillclimb: 2.25532 2 26 5
+WARNING: already 46 iterations in hillclimb: 1.00001 0 26 5
+WARNING: already 41 iterations in hillclimb: 1.70129 1 22 38
+WARNING: already 42 iterations in hillclimb: 1.095 1 19 65
+WARNING: already 43 iterations in hillclimb: 1.00001 0 19 65
+40000
+WARNING: already 41 iterations in hillclimb: 1.15347 2 33 32
+WARNING: already 42 iterations in hillclimb: 1.00001 0 33 32
+WARNING: already 41 iterations in hillclimb: 1.02472 2 43 21
+WARNING: already 42 iterations in hillclimb: 1.83328 2 30 21
+WARNING: already 43 iterations in hillclimb: 1.00001 0 30 21
+WARNING: already 41 iterations in hillclimb: 1.00001 0 23 63
+WARNING: already 41 iterations in hillclimb: 1.02126 1 45 64
+WARNING: already 42 iterations in hillclimb: 1.00001 0 45 64
+50000
+Reading more sentence pairs into memory ... 
+WARNING: already 41 iterations in hillclimb: 4.10947 2 8 3
+WARNING: already 42 iterations in hillclimb: 8.06412 2 71 2
+WARNING: already 43 iterations in hillclimb: 5.10956 2 11 3
+WARNING: already 44 iterations in hillclimb: 6.84402 2 77 34
+WARNING: already 45 iterations in hillclimb: 2.01197 2 55 17
+WARNING: already 46 iterations in hillclimb: 2.52442 2 60 17
+WARNING: already 47 iterations in hillclimb: 2.05624 1 20 60
+WARNING: already 48 iterations in hillclimb: 1.66787 1 17 34
+WARNING: already 49 iterations in hillclimb: 1.38676 1 1 39
+WARNING: already 50 iterations in hillclimb: 1.00001 0 1 39
+WARNING: already 41 iterations in hillclimb: 1.10127 2 11 6
+WARNING: already 42 iterations in hillclimb: 1.00001 0 11 6
+WARNING: already 41 iterations in hillclimb: 1.00001 0 31 22
+WARNING: already 41 iterations in hillclimb: 1.03299 2 24 32
+WARNING: already 42 iterations in hillclimb: 1.7316 2 33 32
+WARNING: already 43 iterations in hillclimb: 1.49888 2 62 0
+WARNING: already 44 iterations in hillclimb: 1.00001 0 62 0
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1387.64 #alsophisticatedcountcollection: 230.329 #hcsteps: 8.47334
+#peggingImprovements: 0
+D4 table contains 527800 parameters.
+A/D table contains 251783 parameters.
+A/D table contains 195178 parameters.
+NTable contains 257650 parameter.
+p0_count is 1.61847e+06 and p1 is 63008.3; p0 is 0.999 p1: 0.001
+T3To4: TRAIN CROSS-ENTROPY 8.08707 PERPLEXITY 271.925
+T3To4: (4) TRAIN VITERBI CROSS-ENTROPY 8.17459 PERPLEXITY 288.933
+
+T3To4 Viterbi Iteration : 4 took: 70 seconds
+
+---------------------
+Model4: Iteration 5
+Reading more sentence pairs into memory ... 
+10000
+20000
+30000
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1390.07 #alsophisticatedcountcollection: 170.506 #hcsteps: 6.20423
+#peggingImprovements: 0
+D4 table contains 527800 parameters.
+A/D table contains 251783 parameters.
+A/D table contains 195915 parameters.
+NTable contains 257650 parameter.
+p0_count is 1.58174e+06 and p1 is 81373.4; p0 is 0.999 p1: 0.001
+Model4: TRAIN CROSS-ENTROPY 7.94522 PERPLEXITY 246.461
+Model4: (5) TRAIN VITERBI CROSS-ENTROPY 8.00904 PERPLEXITY 257.609
+
+Model4 Viterbi Iteration : 5 took: 342 seconds
+
+---------------------
+Model4: Iteration 6
+Reading more sentence pairs into memory ... 
+10000
+20000
+30000
+40000
+50000
+Reading more sentence pairs into memory ... 
+Reading more sentence pairs into memory ... 
+#centers(pre/hillclimbed/real): 1 1 1  #al: 1390.45 #alsophisticatedcountcollection: 143.092 #hcsteps: 5.77509
+#peggingImprovements: 0
+D4 table contains 527800 parameters.
+A/D table contains 251783 parameters.
+A/D table contains 195843 parameters.
+NTable contains 257650 parameter.
+p0_count is 1.57773e+06 and p1 is 83378.5; p0 is 0.999 p1: 0.001
+Model4: TRAIN CROSS-ENTROPY 7.72091 PERPLEXITY 210.972
+Model4: (6) TRAIN VITERBI CROSS-ENTROPY 7.77688 PERPLEXITY 219.319
+
+Model4 Viterbi Iteration : 6 took: 277 seconds
+H333444 Training Finished at: Sun Apr 17 21:10:45 2016
+
+
+Entire Viterbi H333444 Training took: 851 seconds
+==========================================================
+
+Entire Training took: 1188 seconds
+Program Finished at: Sun Apr 17 21:10:45 2016
+
+==========================================================
+Executing: rm -f /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.A3.final.gz
+Executing: gzip /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.A3.final
+(3) generate word alignment @ Sun Apr 17 21:10:48 ICT 2016
+Combining forward and inverted alignment from files:
+  /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.A3.final.{bz2,gz}
+  /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.A3.final.{bz2,gz}
+Executing: mkdir -p /home/ngocha/vjjt/working/train/model
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/training/giza2bal.pl -d "gzip -cd /home/ngocha/vjjt/working/train/giza.ja-vi/ja-vi.A3.final.gz" -i "gzip -cd /home/ngocha/vjjt/working/train/giza.vi-ja/vi-ja.A3.final.gz" |/home/ngocha/vjjt/mosesdecoder/scripts/../bin/symal -alignment="grow" -diagonal="yes" -final="yes" -both="yes" > /home/ngocha/vjjt/working/train/model/aligned.grow-diag-final-and
+symal: computing grow alignment: diagonal (1) final (1)both-uncovered (1)
+skip=<0> counts=<55223>
+(4) generate lexical translation table 0-0 @ Sun Apr 17 21:10:57 ICT 2016
+(/home/ngocha/vjjt/corpus/train.clean.vi,/home/ngocha/vjjt/corpus/train.clean.ja,/home/ngocha/vjjt/working/train/model/lex)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Saved: /home/ngocha/vjjt/working/train/model/lex.f2e and /home/ngocha/vjjt/working/train/model/lex.e2f
+FILE: /home/ngocha/vjjt/corpus/train.clean.ja
+FILE: /home/ngocha/vjjt/corpus/train.clean.vi
+FILE: /home/ngocha/vjjt/working/train/model/aligned.grow-diag-final-and
+(5) extract phrases @ Sun Apr 17 21:11:05 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/scripts/generic/extract-parallel.perl 4 split "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/extract /home/ngocha/vjjt/corpus/train.clean.ja /home/ngocha/vjjt/corpus/train.clean.vi /home/ngocha/vjjt/working/train/model/aligned.grow-diag-final-and /home/ngocha/vjjt/working/train/model/extract 7 orientation --model wbe-msd --GZOutput 
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/generic/extract-parallel.perl 4 split "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/extract /home/ngocha/vjjt/corpus/train.clean.ja /home/ngocha/vjjt/corpus/train.clean.vi /home/ngocha/vjjt/working/train/model/aligned.grow-diag-final-and /home/ngocha/vjjt/working/train/model/extract 7 orientation --model wbe-msd --GZOutput 
+MAX 7 1 0
+Started Sun Apr 17 21:11:05 2016
+using gzip 
+isBSDSplit=0 
+Executing: mkdir -p /home/ngocha/vjjt/working/train/model/tmp.3778; ls -l /home/ngocha/vjjt/working/train/model/tmp.3778 
+total=55223 line-per-split=13806 
+split -d -l 13806 -a 7 /home/ngocha/vjjt/corpus/train.clean.ja /home/ngocha/vjjt/working/train/model/tmp.3778/target.split -d -l 13806 -a 7 /home/ngocha/vjjt/working/train/model/aligned.grow-diag-final-and /home/ngocha/vjjt/working/train/model/tmp.3778/align.split -d -l 13806 -a 7 /home/ngocha/vjjt/corpus/train.clean.vi /home/ngocha/vjjt/working/train/model/tmp.3778/source.merging extract / extract.inv
+gunzip -c /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000000.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000001.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000002.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000003.gz  | LC_ALL=C sort     -T /home/ngocha/vjjt/working/train/model/tmp.3778 2>> /dev/stderr | gzip -c > /home/ngocha/vjjt/working/train/model/extract.sorted.gz 2>> /dev/stderr 
+gunzip -c /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000000.o.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000001.o.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000002.o.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000003.o.gz  | LC_ALL=C sort     -T /home/ngocha/vjjt/working/train/model/tmp.3778 2>> /dev/stderr | gzip -c > /home/ngocha/vjjt/working/train/model/extract.o.sorted.gz 2>> /dev/stderr 
+gunzip -c /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000000.inv.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000001.inv.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000002.inv.gz /home/ngocha/vjjt/working/train/model/tmp.3778/extract.0000003.inv.gz  | LC_ALL=C sort     -T /home/ngocha/vjjt/working/train/model/tmp.3778 2>> /dev/stderr | gzip -c > /home/ngocha/vjjt/working/train/model/extract.inv.sorted.gz 2>> /dev/stderr 
+Finished Sun Apr 17 21:12:24 2016
+(6) score phrases @ Sun Apr 17 21:12:24 ICT 2016
+(6.1)  creating table half /home/ngocha/vjjt/working/train/model/phrase-table.half.f2e @ Sun Apr 17 21:12:24 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/scripts/generic/score-parallel.perl 4 "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/extract.sorted.gz /home/ngocha/vjjt/working/train/model/lex.f2e /home/ngocha/vjjt/working/train/model/phrase-table.half.f2e.gz  0 
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/generic/score-parallel.perl 4 "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/extract.sorted.gz /home/ngocha/vjjt/working/train/model/lex.f2e /home/ngocha/vjjt/working/train/model/phrase-table.half.f2e.gz  0 
+using gzip 
+Started Sun Apr 17 21:12:24 2016
+/home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/tmp.3839/extract.0.gz /home/ngocha/vjjt/working/train/model/lex.f2e /home/ngocha/vjjt/working/train/model/tmp.3839/phrase-table.half.0000000.gz  2>> /dev/stderr 
+/home/ngocha/vjjt/working/train/model/tmp.3839/run.0.sh/home/ngocha/vjjt/working/train/model/tmp.3839/run.3.sh/home/ngocha/vjjt/working/train/model/tmp.3839/run.2.sh/home/ngocha/vjjt/working/train/model/tmp.3839/run.1.shmv /home/ngocha/vjjt/working/train/model/tmp.3839/phrase-table.half.0000000.gz /home/ngocha/vjjt/working/train/model/phrase-table.half.f2e.gzrm -rf /home/ngocha/vjjt/working/train/model/tmp.3839 
+Finished Sun Apr 17 21:14:09 2016
+(6.3)  creating table half /home/ngocha/vjjt/working/train/model/phrase-table.half.e2f @ Sun Apr 17 21:14:09 ICT 2016
+/home/ngocha/vjjt/mosesdecoder/scripts/generic/score-parallel.perl 4 "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/extract.inv.sorted.gz /home/ngocha/vjjt/working/train/model/lex.e2f /home/ngocha/vjjt/working/train/model/phrase-table.half.e2f.gz --Inverse 1 
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/generic/score-parallel.perl 4 "sort    " /home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/extract.inv.sorted.gz /home/ngocha/vjjt/working/train/model/lex.e2f /home/ngocha/vjjt/working/train/model/phrase-table.half.e2f.gz --Inverse 1 
+using gzip 
+Started Sun Apr 17 21:14:09 2016
+/home/ngocha/vjjt/mosesdecoder/scripts/../bin/score /home/ngocha/vjjt/working/train/model/tmp.3891/extract.0.gz /home/ngocha/vjjt/working/train/model/lex.e2f /home/ngocha/vjjt/working/train/model/tmp.3891/phrase-table.half.0000000.gz --Inverse  2>> /dev/stderr 
+/home/ngocha/vjjt/working/train/model/tmp.3891/run.0.sh/home/ngocha/vjjt/working/train/model/tmp.3891/run.2.sh/home/ngocha/vjjt/working/train/model/tmp.3891/run.3.sh/home/ngocha/vjjt/working/train/model/tmp.3891/run.1.shgunzip -c /home/ngocha/vjjt/working/train/model/tmp.3891/phrase-table.half.*.gz 2>> /dev/stderr| LC_ALL=C sort     -T /home/ngocha/vjjt/working/train/model/tmp.3891  | gzip -c > /home/ngocha/vjjt/working/train/model/phrase-table.half.e2f.gz  2>> /dev/stderr rm -rf /home/ngocha/vjjt/working/train/model/tmp.3891 
+Finished Sun Apr 17 21:16:02 2016
+(6.6) consolidating the two halves @ Sun Apr 17 21:16:02 ICT 2016
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/../bin/consolidate /home/ngocha/vjjt/working/train/model/phrase-table.half.f2e.gz /home/ngocha/vjjt/working/train/model/phrase-table.half.e2f.gz /dev/stdout | gzip -c > /home/ngocha/vjjt/working/train/model/phrase-table.gz
+Consolidate v2.0 written by Philipp Koehn
+consolidating direct and indirect rule tables
+..........................................................
+Executing: rm -f /home/ngocha/vjjt/working/train/model/phrase-table.half.*
+(7) learn reordering model @ Sun Apr 17 21:16:57 ICT 2016
+(7.1) [no factors] learn reordering model @ Sun Apr 17 21:16:57 ICT 2016
+(7.2) building tables @ Sun Apr 17 21:16:57 ICT 2016
+Executing: /home/ngocha/vjjt/mosesdecoder/scripts/../bin/lexical-reordering-score /home/ngocha/vjjt/working/train/model/extract.o.sorted.gz 0.5 /home/ngocha/vjjt/working/train/model/reordering-table. --model "wbe msd wbe-msd-bidirectional-fe"
+Lexical Reordering Scorer
+scores lexical reordering models of several types (hierarchical, phrase-based and word-based-extraction
+(8) learn generation model @ Sun Apr 17 21:17:27 ICT 2016
+  no generation model requested, skipping step
+(9) create moses.ini @ Sun Apr 17 21:17:27 ICT 2016
